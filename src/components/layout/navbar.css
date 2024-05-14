@@ -1,60 +1,70 @@
 nav {
-    background-color: #3498db; /* Blue background color */
-    min-height: 100px;
-    position: relative;
+  background-color: #1D3557; 
+  min-height: 100px;
+  position: relative;
 }
 
-.top-nav {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Add padding to the navbar */
-    max-width: 70%;
-    margin: auto;
-  }
-  
-  .left-section {
-    display: flex;
-  }
-  
-  .right-section {
-    display: flex;
-  }
-  
-  .navbar-symbol {
-    color: #fff; /* White text color */
-    padding: 10px; /* Add padding to the symbols */
-  }
-  
-  .navbar-contact {
-    color: #fff; /* White text color */
-    padding: 10px; /* Add padding to the contacts */
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .navbar-contact:hover {
-    background-color: #f0f0f0; /* Light gray background color on hover */
-  }
-  
+.contact-icons {
+  padding-right: 8px;
+}
 
+  .top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; 
+  max-width: 70%;
+  margin: auto;
+}
+  
+.left-section {
+  display: flex;
+}
+  
+.right-section {
+  display: flex;
+}
+  
+.navbar-symbol {
+  color: #F1FAEE; 
+  padding: 10px; 
+}
 
+.navbar-contact {
+  color: #F1FAEE; 
+  padding: 12px; 
+  text-decoration: none;
+}
+
+.navbar-email {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
+
+.navbar-contact:hover, 
+.navbar-symbol:hover,
+.overlay-links:hover{
+  color: #E63946;
+  cursor: pointer;
+}
+  
 .overlay {
-position: absolute;
-left: 50%;
-top: 40px;
-transform: translateX(-50%);
-background-color: white;
-padding: 5px 25px;
-min-width: 70%;
-border-radius: 122px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-box-shadow: 5px 5px 0 0 red;
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  background-color: #F1FAEE;
+  padding: 5px 25px;
+  min-width: 70%;
+  border-radius: 122px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 0 0 #E63946;
 }
 
-.page-links {
+.overlay-right {
     display: flex;
-    gap: 10px;
+    gap: 25px;
+    color: #1D3557;
 }
