@@ -1,12 +1,12 @@
-.button-submit {
-    background-color: #ffffff; /* Set initial background color */
+.button-post-now-blue {
+    background-color: white;
     border-radius: 78px;
+    border: none;
     width: 100px;
     height: 35px;
     flex-shrink: 0;
-    box-shadow: 1px 1px 0 0 #e63946;
-    border: none;
-    color: #e63946; /* Set initial text color */
+    box-shadow: 1px 1px 0 0 #118ab2;
+    color: #118ab2; 
     text-align: center;
     font-family: "Roboto-Regular", Helvetica;
     font-size: 14px;
@@ -16,8 +16,8 @@
     transition: background-color 0.3s, color 0.3s;
   }
   
-  .button-submit:hover {
-    background-color: #e63946;
+  .button-post-now-blue:hover {
+    background-color: #118ab2; 
     color: white;
   }
   

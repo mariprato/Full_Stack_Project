@@ -3,7 +3,9 @@ import "./ButtonSubmit.css"
 
 function ButtonSubmit(props) {
   return (
-    <button className="button-submit">{props.text}</button>
+    <button
+    type='button'
+    className="button-submit">{props.text}</button>
   );
 }
 
