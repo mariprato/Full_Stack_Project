@@ -38,7 +38,7 @@ nav {
 
 .navbar-email {
   text-decoration: none;
-  color: inherit; /* Inherit color from parent */
+  color: inherit;
 }
  
 .overlay {

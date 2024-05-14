@@ -5,7 +5,6 @@ import {
   faFacebookF,
   faInstagram,
   faPinterestP,
-  faSquareFacebook,
   faThreads,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -57,7 +56,7 @@ const Navbar = () => {
           <a className="overlay-links">Lost Pets</a>
           <a className="overlay-links">Details</a>
           <a className="overlay-links">Contact Us</a>
-          <button className="primary-button">button</button>
+          {/* BUTTON COMPONENT HERE */}
         </div>
       </div>
     </nav>
