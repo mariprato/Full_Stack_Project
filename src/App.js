@@ -5,13 +5,12 @@ import "./App.css";
 import PetInfo from "./components/pages/PetInfo";
 import SubmissionForm from "./components/pages/SubmissionForm";
 import LostPets from "./components/pages/LostPets";
-import AboutUs from "./components/pages/AboutUs";
-import Login from "./components/pages/Login";
-import Registration from "./components/pages/Registration";
+import Header from "./components/layout/header";
 
 function App() {
   return (
     <div className="App">
+      
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,6 +22,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
         </Routes>
       </Router>
+      <Header />
     </div>
   );
 }
