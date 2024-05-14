@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import ButtonPostNow from "../buttons/ButtonPostNow";
 
 const Navbar = () => {
   return (
@@ -56,7 +57,7 @@ const Navbar = () => {
           <a className="overlay-links">Lost Pets</a>
           <a className="overlay-links">Details</a>
           <a className="overlay-links">Contact Us</a>
-          {/* BUTTON COMPONENT HERE */}
+          <ButtonPostNow text="Post Now" />
         </div>
       </div>
     </nav>

@@ -1,0 +1,17 @@
+.button-post-now {
+    background-color: #e63946;
+    border-radius: 78px;
+    width: 100px;
+    height: 35px;
+    flex-shrink: 0;
+    box-shadow: 1px 1px 0 0 #1D3557;
+    border-color: #e63946;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "Roboto-Regular", Helvetica;;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
