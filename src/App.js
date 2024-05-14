@@ -6,10 +6,12 @@ import PetInfo from "./components/pages/PetInfo";
 import SubmissionForm from "./components/pages/SubmissionForm";
 import Confirmation from "./components/pages/Confirmation";
 import LostPets from "./components/pages/LostPets";
+import Header from "./components/layout/header";
 
 function App() {
   return (
     <div className="App">
+      
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,6 +21,7 @@ function App() {
           <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </Router>
+      <Header />
     </div>
   );
 }

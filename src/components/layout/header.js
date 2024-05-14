@@ -1,16 +1,18 @@
 import React from 'react';
-import './Header.css'
+import './header.css';
+
 function Header() {
     return (
-
-        <div className="header">
-        <h1>Fur-ever Found</h1>
-        <h2>Bringing lost pets back to their loving arms</h2>
-        <img src="Header.jpeg" alt="Header Image" />
-
-    </div>
-
-    )
+        <>
+            <div className="title-section">
+                <img src="images/fureverfound.png" alt="FureverFound Title Image" />
+                <h2>Bringing lost pets back to their loving arms</h2>
+            </div>
+            <div className="image-section">
+                <img src="images/Header.jpeg" alt="Header Image" />
+            </div>
+        </>
+    );
 }
 
-export default Header
+export default Header;
