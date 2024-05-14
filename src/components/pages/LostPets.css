@@ -1,7 +1,16 @@
 .petCardsContainer {
     display: flex;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    margin: 2%;
+    border: solid 3px purple;
 }
 
 .lost-pets-layout {
     background-color:#1D3557;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: solid 3px yellow;
 }
