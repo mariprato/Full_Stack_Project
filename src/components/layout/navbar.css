@@ -58,6 +58,7 @@ nav {
 
 .overlay-right {
     display: flex;
+    align-items: center;
     gap: 25px;
     font-weight: bold;
     color: #1D3557;
@@ -73,3 +74,4 @@ nav {
   color: #457B9D;
   cursor: pointer;
 }
+
