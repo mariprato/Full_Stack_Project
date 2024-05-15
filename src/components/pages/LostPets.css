@@ -5,9 +5,8 @@ h1 {
 .petCardsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    width: 70%;
-    margin: 1%;
+    grid-gap: 0.7rem;
+    width: 60%;
     justify-content: space-between;
     padding: 2%;
 }

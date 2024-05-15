@@ -78,5 +78,6 @@
 
   .overlay-text {
     color: #1D3557;
-    margin: 1%;
+    margin: 3%;
+    font-weight: bold;
   }
