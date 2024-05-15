@@ -10,8 +10,11 @@ import {
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import ButtonPostNow from "../buttons/ButtonPostNow";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <nav>
       <div className="top-nav">
@@ -49,14 +52,19 @@ const Navbar = () => {
         </div>
       </div>
       <div className="overlay">
-        <div className="logo">
+        <div className="logo" onClick={() => navigate("/")}>
           <img src="/image/MagicEraser_240512_152556 2.png" />
         </div>
         <div className="overlay-right">
-          <a className="overlay-links">Home</a>
-          <a className="overlay-links">Lost Pets</a>
-          <a className="overlay-links">Details</a>
-          <a className="overlay-links">Contact Us</a>
+          <a className="overlay-links" onClick={() => navigate("/")}>
+            Home
+          </a>
+          <a className="overlay-links" onClick={() => navigate("/lostPets")}>
+            Lost Pets
+          </a>
+          <a className="overlay-links" onClick={() => navigate("/aboutUs")}>
+            About Us
+          </a>
           <ButtonPostNow text="Post Now" />
         </div>
       </div>
