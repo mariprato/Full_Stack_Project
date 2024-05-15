@@ -1,7 +1,21 @@
+h1 {
+    color: #F1FAEE;
+    text-shadow: 0 0 1px #E63946, 0 0 1px #E63946, 0 0 1px #E63946, 0 0 1px #E63946;
+}
 .petCardsContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.7rem;
+    width: 60%;
+    justify-content: space-between;
+    padding: 2%;
 }
 
 .lost-pets-layout {
     background-color:#1D3557;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }

@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PetCard from "../PetCard";
 import pets from "../../petDatabase.js"
 import './LostPets.css';
+import Pagination from "../layout/pagination.js";
 
 const LostPets = () => {
+  function getPetArray(pets){
+    const indexToStart = (activePage - 1) * 8;
+    return pets.slice(indexToStart, indexToStart + 8) 
+  }
 
+  const [activePage, setActivePage] = useState(1)
+  const [petsToDisplay, setPetsToDisplay] = useState([])
+
+  useEffect(() => {
+    setPetsToDisplay([])
+    const petArray = getPetArray(pets)
+    setPetsToDisplay(petArray)
+  }, [activePage]);
+  
   return (
     <div className = "lost-pets-layout">
-      <h1>This is the Lost Pets page</h1>
-      {/* This will be removed and the pets array will be mapped through. Putting this here to demonstrate the component as page logic does not yet exist. */}
+      <h1>Lost Pets</h1>
       <div className = "petCardsContainer">
-        <PetCard pet = {pets[0]} />
-        <PetCard pet = {pets[1]} />
+      {petsToDisplay.map((pet) => 
+          <PetCard key={pet.id} pet={pet} />
+      )}
       </div>
+      
+      <Pagination pets={pets} activePage={activePage} setActivePage={setActivePage} setPetsToDisplay={setPetsToDisplay}/>
     </div>
   );
 };
