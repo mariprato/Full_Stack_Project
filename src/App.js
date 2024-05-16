@@ -5,7 +5,6 @@ import "./App.css";
 import PetInfo from "./components/pages/PetInfo";
 import SubmissionForm from "./components/pages/SubmissionForm";
 import LostPets from "./components/pages/LostPets";
-import Header from "./components/layout/header";
 import AboutUs from "./components/pages/AboutUs";
 import Login from "./components/pages/Login";
 import Registration from "./components/pages/Registration";
