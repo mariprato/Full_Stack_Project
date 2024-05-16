@@ -9,7 +9,8 @@
 
   .title-section {
     /* Add styles for the title section */
-    text-align: center; /* Center align the content */
+    text-align: center; 
+    margin-top: 20px;
 }
 
 .title-section img {
@@ -21,7 +22,7 @@
 
 .image-section {
     /* Add styles for the image section */
-    text-align: center; /* Center align the content */
+    text-align: center; 
 }
 
 .image-section img {
