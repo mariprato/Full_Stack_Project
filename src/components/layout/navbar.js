@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
       <div className="overlay">
         <div className="logo" onClick={() => navigate("/")}>
-          <img src="/image/MagicEraser_240512_152556 2.png" />
+          <img src="/images/MagicEraser_240512_152556 2.png" />
         </div>
         <div className="overlay-right">
           <a className="overlay-links" onClick={() => navigate("/")}>
