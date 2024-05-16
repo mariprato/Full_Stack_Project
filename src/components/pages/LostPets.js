@@ -3,6 +3,7 @@ import PetCard from "../PetCard";
 import pets from "../../petDatabase.js"
 import './LostPets.css';
 import Pagination from "../layout/pagination.js";
+import Navbar from "../layout/navbar.js";
 
 const LostPets = () => {
   function getPetArray(pets){
@@ -20,16 +21,19 @@ const LostPets = () => {
   }, [activePage]);
   
   return (
-    <div className = "lost-pets-layout">
-      <h1>Lost Pets</h1>
-      <div className = "petCardsContainer">
-      {petsToDisplay.map((pet) => 
-          <PetCard key={pet.id} pet={pet} />
-      )}
+    <>
+      <Navbar/>
+      <div className = "lost-pets-layout">
+        <h1>Lost Pets</h1>
+        <div className = "petCardsContainer">
+        {petsToDisplay.map((pet) => 
+            <PetCard key={pet.id} pet={pet} />
+        )}
+        </div>
+        
+        <Pagination pets={pets} activePage={activePage} setActivePage={setActivePage} setPetsToDisplay={setPetsToDisplay}/>
       </div>
-      
-      <Pagination pets={pets} activePage={activePage} setActivePage={setActivePage} setPetsToDisplay={setPetsToDisplay}/>
-    </div>
+    </>
   );
 };
 

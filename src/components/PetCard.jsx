@@ -10,7 +10,6 @@ const PetCard = ({pet}) => {
                         <p className = "overlay-text">Species: {pet.type}</p>
                         <p className = "overlay-text">Location: {pet.location}</p>
                         <p className = "overlay-text">Last Seen: {pet.dateLastSeen}</p>
-                        <p className = "overlay-text">Call: {pet.contactNumber}</p>
                     </div>}
 
                 {pet.found &&
