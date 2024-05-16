@@ -1,7 +1,8 @@
 .card-text {
-    color: #F1FAEE;
-    text-shadow: 0 0 1px #E63946, 0 0 1px #E63946, 0 0 1px #E63946, 0 0 1px #E63946;
+    color: #E63946;
+    text-shadow: 1.5px 0 1px #1D3557;
     font-size: large;
+    font-weight: bold;
 }
 
 .card {
