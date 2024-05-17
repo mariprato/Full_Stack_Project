@@ -1,29 +1,27 @@
 .filter-buttons-container {
     display: flex;
-    min-width: 60%;
-    margin: 1%;
-    align-self: center;
-    justify-content: flex-start;
+    margin: 0.3%;
     border-radius: 12px;
 }
 
 .options-buttons-container {
     display: flex;
     margin-left: 1%;
+    flex-wrap:wrap;
 }
 
 .filter-button {
     background-color: #e63946;
     border-radius: 4px;
     border: solid 2px #F1FAEE;
-    min-width: 100px;
+    min-width: 150px;
     min-height: 30px;
     padding: 5px;
-    height: 100%;
     color: #F1FAEE; 
     text-align: center;
     font-family: "Roboto-Regular", Helvetica;
     font-size: 18px;
+    font-weight: bolder;
 }
 
 .options-button {
@@ -31,13 +29,18 @@
     border-radius: 4px;
     border: solid 2px #e63946;
     padding: 5px;
-    min-width: 100px;
+    min-width: 120px;
     min-height: 30px;
-    height: 100%;
     color: #e63946; 
     text-align: center;
     font-family: "Roboto-Regular", Helvetica;
     font-size: 18px;
     font-weight: bolder;
+}
+
+.current-option {
+    background-color: #e63946;
+    color: #F1FAEE;
+    border: solid 2px #F1FAEE;
 }
 
