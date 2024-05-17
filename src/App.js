@@ -9,9 +9,11 @@ import AboutUs from "./components/pages/AboutUs";
 import Login from "./components/pages/Login";
 import Registration from "./components/pages/Registration";
 
+
 function App() {
   return (
     <div className="App">
+      
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,6 +25,8 @@ function App() {
           <Route path="/registration" element={<Registration />} />
         </Routes>
       </Router>
+      
+      
     </div>
   );
 }
