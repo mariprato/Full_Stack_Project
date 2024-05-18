@@ -1,0 +1,88 @@
+.footer-container {
+    padding: 5px;
+    background-color: #1D3557; 
+    min-height: 100px;
+    position: relative;
+    color: #F1FAEE;
+}
+
+.footer-brand img {
+    width: 140px;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.section-one, .section-two, .section-three, .section-four {
+    flex: 1 1 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-name {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-icons {
+    font-size: 1.2em;
+    color: #F1FAEE;
+}
+
+.footer-link-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link-group a {
+    color: inherit;
+}
+
+.footer-contact {
+    margin: 5px 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (min-width: 640px) {
+    .footer-link-group {
+        flex-direction: column;
+    }
+}
+
+.footer-title {
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.subscribe {
+    padding: 0px;
+}
+
+.subscribe p {
+    margin-bottom: 0px;
+}
