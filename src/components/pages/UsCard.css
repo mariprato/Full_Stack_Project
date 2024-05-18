@@ -1,0 +1,31 @@
+
+  .colleague-card {
+    position: relative; /* Position relative for absolute positioning */
+    margin-bottom: 50px; /* space between cards */
+    margin-right: 50px;
+  }
+  
+  .image-container {
+    position: absolute;
+    margin-bottom: 50px; /* space between cards */
+    margin-right: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center; /* Center image */
+  }
+  
+  .colleague-image {
+    width: 100px; /* Adjust image width */
+    margin-bottom: 50px; /*space between cards */
+    margin-right: 50px;
+  }
+  
+  .card-text {
+    padding-top: 120px; /* Space for the image */
+  }
+  
+  .details {
+    white-space: pre-line; /* Preserve line breaks in description */
+  }
+  
