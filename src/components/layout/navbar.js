@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-contact">
             <a
-              className="footer-email"
+              className="navbar-email"
               href="mailto:enquiry@fur-everfound.com"
               rel="noreferrer"
               target="_blank"
