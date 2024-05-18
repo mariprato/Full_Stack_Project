@@ -22,22 +22,22 @@ const Navbar = () => {
           <div className="navbar-symbol">
             <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
           </div>
-          <div className="footer-symbol">
+          <div className="navbar-symbol">
             <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
           </div>
-          <div className="footer-symbol">
+          <div className="navbar-symbol">
             <FontAwesomeIcon className="contact-icons" icon={faThreads} />
           </div>
-          <div className="footer-symbol">
+          <div className="navbar-symbol">
             <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
           </div>
         </div>
         <div className="right-section">
-          <div className="footer-contact">
+          <div className="navbar-contact">
             <FontAwesomeIcon className="contact-icons" icon={faPhone} />
             (000) 000 000
           </div>
-          <div className="footer-contact">
+          <div className="navbar-contact">
             <a
               className="footer-email"
               href="mailto:enquiry@fur-everfound.com"
