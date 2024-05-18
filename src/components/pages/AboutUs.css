@@ -33,11 +33,11 @@ h1 {
   }
   
   .row:first-child {
-    margin-bottom: 20px; /* Space between the two rows */
+    margin-bottom: 20px; 
   }
   
   .colleague-card {
-    margin: 0 10px; /* Space between cards */
+    margin: 0 10px; 
   }
   
   

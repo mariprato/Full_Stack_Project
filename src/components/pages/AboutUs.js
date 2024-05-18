@@ -13,8 +13,8 @@ const AboutUs = () => {
 
   return (
     <>
-      <Navbar /> {/* Include Navbar */}
-      <div className="colleague-members-layout" style={{ paddingTop: "50px" }}> {/* Add paddingTop to avoid overlap */}
+      <Navbar />
+      <div className="colleague-members-layout" style={{ paddingTop: "50px" }}>
         <h1>Our team</h1>
         <div className="colleagueCardsContainer">
           <div className="row">
@@ -34,4 +34,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-
