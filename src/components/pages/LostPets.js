@@ -22,31 +22,43 @@ const LostPets = () => {
     return pets.slice(indexToStart, indexToStart + 8);
   }
 
-  function getPetCategories() {
+  function getPetCategories(filteredPets) {
     let output = ["All"];
-    for (let i = 0; i < pets.length; ++i)
-      output.push(pets[i]["type"]);
+    for (let i = 0; i < filteredPets.length; ++i) {
+      output.push(filteredPets[i]["type"]);
+    }
     let filteredOutput = output.filter(
       (item, index) => output.indexOf(item) === index
     );
     return filteredOutput;
   }
 
-  function getLocationCategories() {
+  function getLocationCategories(filteredPets) {
     let output = ["All"];
-    for (let i = 0; i < pets.length; ++i)
-      output.push(pets[i]["location"]);
+    for (let i = 0; i < filteredPets.length; ++i) {
+      output.push(filteredPets[i]["location"]);
+    }
     let filteredOutput = output.filter(
       (item, index) => output.indexOf(item) === index
     );
     return filteredOutput;
+  }
+
+  function getStatusCategories(filteredPets) {
+    const statusOptions = ["All"];
+    if (filteredPets.some((pet) => pet.found === true)) {
+      statusOptions.push("Found");
+    }
+    if (filteredPets.some((pet) => pet.found === false)) {
+      statusOptions.push("Lost");
+    }
+    return statusOptions;
   }
 
   function filterPets() {
     let newFilteredPets = [...pets]; // Use the original, unshuffled array so it doesn't break the filter code
-    setActivePage(1);
     if (typeFilter !== "All") {
-      newFilteredPets = pets.filter((pet) => pet.type === typeFilter);
+      newFilteredPets = newFilteredPets.filter((pet) => pet.type === typeFilter);
     }
     if (locationFilter !== "All") {
       newFilteredPets = newFilteredPets.filter(
@@ -68,9 +80,9 @@ const LostPets = () => {
   const [locationFilter, setLocationFilter] = useState("All");
   const [foundFilter, setFoundFilter] = useState("All");
 
-  const petCategories = getPetCategories();
-  const locationCategories = getLocationCategories();
-  const foundCategories = ["All", "Found", "Lost"];
+  const petCategories = getPetCategories(filteredPets);
+  const locationCategories = getLocationCategories(filteredPets);
+  const statusCategories = getStatusCategories(filteredPets);
 
   useEffect(() => {
     setPetsToDisplay([]);
@@ -100,15 +112,13 @@ const LostPets = () => {
               filterMethod="Type"
             />
             <Filter
-              options={["All", ...locationCategories.filter((location) =>
-                pets.some((pet) => pet.type === typeFilter && pet.location === location)
-              )]}
+              options={locationCategories}
               onClick={(option) => setLocationFilter(option)}
               currentlySelected={locationFilter}
               filterMethod="Location"
             />
             <Filter
-              options={foundCategories}
+              options={statusCategories}
               onClick={(option) => setFoundFilter(option)}
               currentlySelected={foundFilter}
               filterMethod="Status"
