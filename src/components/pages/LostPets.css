@@ -1,7 +1,8 @@
-h1 {
+.lost-pets-layout h1 {
     color: #F1FAEE;
     text-shadow: 2px 1px 1px #E63946;
 }
+
 .petCardsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
