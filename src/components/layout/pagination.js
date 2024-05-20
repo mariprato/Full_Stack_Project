@@ -19,7 +19,7 @@ const Pagination = ({pets, activePage, setActivePage}) => {
     const pageNumbers = getPageNumbers();
 
     return ( 
-        <div className = "button-container">
+        <div className = "page-button-container">
             {pageNumbers.map((pageNumber) => (
                 <button className={getClass(pageNumber)} key={pageNumber} onClick={() => setActivePage(pageNumber)}>{pageNumber}</button>
             ))}

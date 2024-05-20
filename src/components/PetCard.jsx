@@ -2,8 +2,8 @@ import './PetCard.css';
 
 const PetCard = ({pet}) => {   
     return ( 
-        <div className="card">    
-            <div className = "image-container">
+        <div className="oet-card">    
+            <div className = "pet-image-container">
                 {!pet.found &&
                     <div className="information-overlay">
                         <p className = "overlay-text">Name: {pet.name}</p>
@@ -24,7 +24,7 @@ const PetCard = ({pet}) => {
                     <img className = "pet-image" src={`../images/${pet.id}.jpg`} alt = {`Image of ${pet.name} the lost ${pet.type}.`}></img>
                 </div>
             </div>
-            <div className = "card-text"><p>{pet.name}, {pet.location}</p></div>
+            <div className = "pet-card-text"><p>{pet.name}, {pet.location}</p></div>
         </div>
      );
 }

@@ -1,18 +1,18 @@
-.card-text {
+.pet-card-text {
     color: #E63946;
     text-shadow: 1.5px 0 1px #1D3557;
     font-size: large;
     font-weight: bold;
 }
 
-.card {
+.pet-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.image-container {
+.pet-image-container {
     display: grid;
     grid-template-columns: repeat(36, 1fr);
     position: relative;

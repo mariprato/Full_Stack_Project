@@ -52,7 +52,7 @@ function FooterCom () {
                             rel="noreferrer"
                             target="_blank"
                         >
-                            <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
+                            <FontAwesomeIcon className="footer-contact-icons" icon={faEnvelope} />
                             enquiry@fur-everfound.com
                         </a>
                     </div>
