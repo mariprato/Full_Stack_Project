@@ -1,0 +1,22 @@
+.active-page, .non-active-page {
+    color: #1D3557;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 1%;
+    border-radius: 4px;
+    
+}
+
+.active-page {
+    background-color: #A8DADC;
+}
+
+.non-active-page {
+    background-color: #F1FAEE;
+}
+
+.page-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1%;
+}

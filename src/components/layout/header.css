@@ -1,0 +1,34 @@
+
+
+.title-section {
+    /* Styles for the title section */
+    text-align: center; 
+    margin-top: 20px;
+    padding-top: 80px; 
+}
+
+.title-section h2 {
+    
+    color: #457B9D; 
+}
+
+
+.title-section img {
+    /* Styles for the title image */
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 10px;
+    margin-bottom: 30px; 
+}
+
+.image-section {
+    
+    text-align: center; 
+}
+
+.image-section img {
+    /* Styles for the header image */
+    width: 70%;  
+    display: block; 
+    margin: 0 auto; 
+}

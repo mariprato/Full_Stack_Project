@@ -1,0 +1,23 @@
+.button-submit {
+    background-color: #ffffff; /* Set initial background color */
+    border-radius: 78px;
+    width: 100px;
+    height: 35px;
+    flex-shrink: 0;
+    box-shadow: 1px 1px 0 0 #e63946;
+    border: none;
+    color: #e63946; /* Set initial text color */
+    text-align: center;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button-submit:hover {
+    background-color: #e63946;
+    color: white;
+  }
+  
