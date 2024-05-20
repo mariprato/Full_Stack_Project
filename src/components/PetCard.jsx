@@ -2,7 +2,7 @@ import './PetCard.css';
 
 const PetCard = ({pet}) => {   
     return ( 
-        <div className="oet-card">    
+        <div className="pet-card">    
             <div className = "pet-image-container">
                 {!pet.found &&
                     <div className="information-overlay">
