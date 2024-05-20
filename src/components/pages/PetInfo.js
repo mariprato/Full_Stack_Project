@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "../layout/navbar";
+import Layout from "../layout/Layout";
 
 const PetInfo = () => {
   return (
     <>
-      <Navbar />
-      <h1>This is the detailed pet info page</h1>
+      <Layout>
+        <h1>This is the Pet Info Page</h1>
+      </Layout>
     </>
   );
 };

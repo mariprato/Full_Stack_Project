@@ -10,10 +10,11 @@ import {
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import ButtonPostNow from "../buttons/ButtonPostNow";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <nav>
@@ -54,6 +55,13 @@ const Navbar = () => {
       <div className="overlay">
         <div className="logo" onClick={() => navigate("/")}>
           <img src="/images/MagicEraser_240512_152556 2.png" />
+        </div>
+        <div className="overlay-middle">
+          <div className="fur-ever-navbar" onClick={() => navigate("/")}>
+            {location.pathname !== "/" && (
+              <img src="/images/fureverfound.png" alt="Logo" />
+            )}
+          </div>
         </div>
         <div className="overlay-right">
           <a className="overlay-links" onClick={() => navigate("/")}>
