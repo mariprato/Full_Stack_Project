@@ -6,6 +6,7 @@ import Pagination from "../layout/pagination.js";
 import Navbar from "../layout/navbar.js";
 import Filter from "../filters/filter.js";
 import FilterContainer from "../filters/filterContainer.js";
+import Layout from "../layout/Layout.js";
 
 const LostPets = () => {
   function shuffleArray(array) {
@@ -58,7 +59,9 @@ const LostPets = () => {
   function filterPets() {
     let newFilteredPets = [...pets]; // Use the original, unshuffled array so it doesn't break the filter code
     if (typeFilter !== "All") {
-      newFilteredPets = newFilteredPets.filter((pet) => pet.type === typeFilter);
+      newFilteredPets = newFilteredPets.filter(
+        (pet) => pet.type === typeFilter
+      );
     }
     if (locationFilter !== "All") {
       newFilteredPets = newFilteredPets.filter(
@@ -100,45 +103,46 @@ const LostPets = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="lost-pets-layout">
-        <h1>Lost Pets</h1>
-        <FilterContainer>
-          <div className="filter-buttons-container">
-            <Filter
-              options={petCategories}
-              onClick={(option) => setTypeFilter(option)}
-              currentlySelected={typeFilter}
-              filterMethod="Type"
-            />
-            <Filter
-              options={locationCategories}
-              onClick={(option) => setLocationFilter(option)}
-              currentlySelected={locationFilter}
-              filterMethod="Location"
-            />
-            <Filter
-              options={statusCategories}
-              onClick={(option) => setFoundFilter(option)}
-              currentlySelected={foundFilter}
-              filterMethod="Status"
-            />
+      <Layout>
+        <div className="lost-pets-layout">
+          <h1>Lost Pets</h1>
+          <FilterContainer>
+            <div className="filter-buttons-container">
+              <Filter
+                options={petCategories}
+                onClick={(option) => setTypeFilter(option)}
+                currentlySelected={typeFilter}
+                filterMethod="Type"
+              />
+              <Filter
+                options={locationCategories}
+                onClick={(option) => setLocationFilter(option)}
+                currentlySelected={locationFilter}
+                filterMethod="Location"
+              />
+              <Filter
+                options={statusCategories}
+                onClick={(option) => setFoundFilter(option)}
+                currentlySelected={foundFilter}
+                filterMethod="Status"
+              />
+            </div>
+          </FilterContainer>
+
+          <div className="petCardsContainer">
+            {petsToDisplay.map((pet) => (
+              <PetCard key={pet.id} pet={pet} />
+            ))}
           </div>
-        </FilterContainer>
 
-        <div className="petCardsContainer">
-          {petsToDisplay.map((pet) => (
-            <PetCard key={pet.id} pet={pet} />
-          ))}
+          <Pagination
+            pets={filteredPets}
+            activePage={activePage}
+            setActivePage={setActivePage}
+            setPetsToDisplay={setPetsToDisplay}
+          />
         </div>
-
-        <Pagination
-          pets={filteredPets}
-          activePage={activePage}
-          setActivePage={setActivePage}
-          setPetsToDisplay={setPetsToDisplay}
-        />
-      </div>
+      </Layout>
     </>
   );
 };
