@@ -1,8 +1,11 @@
 import './PetCard.css';
+import {Link} from "react-router-dom";
 
 const PetCard = ({pet}) => {   
     return ( 
-        <div className="pet-card">    
+        <>
+        <Link to = {`/petInfo/${pet.id}`}>
+        <div className="pet-card">
             <div className = "pet-image-container">
                 {!pet.found &&
                     <div className="information-overlay">
@@ -25,7 +28,10 @@ const PetCard = ({pet}) => {
                 </div>
             </div>
             <div className = "pet-card-text"><p>{pet.name}, {pet.location}</p></div>
+
         </div>
+        </Link>
+        </>
      );
 }
  
