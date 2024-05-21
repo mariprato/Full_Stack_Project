@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import ButtonPostNow from "../buttons/ButtonPostNow";
+import ButtonPostNow from "../ButtonPostNow";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
