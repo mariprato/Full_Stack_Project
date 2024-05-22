@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SubscriptionForm.css";
+import ButtonComponent from "../ButtonComponent";
 
 function SubscriptionForm() {
     const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ function SubscriptionForm() {
                         placeholder="Enter your email"
                         required
                     />
-                    <button type="submit">Submit</button>
+                    <ButtonComponent variant="button-newsletter-submit" type="submit">Submit</ButtonComponent>
                 </form>
             )}
             {showPopup && (

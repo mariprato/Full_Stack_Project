@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../layout/navbar";
-import ButtonSubmit from '../ButtonSubmit';
 import './SubmissionForm.css';
+import ButtonComponent from "../ButtonComponent";
 
 const SubmissionForm = () => {
   const [formData, setFormData] = useState({
@@ -159,7 +159,7 @@ const SubmissionForm = () => {
             ></textarea>
           </div>
           <div className="form-group">
-            <ButtonSubmit text="Submit" />
+            <ButtonComponent type="submit" variant="button-form-submit">Submit</ButtonComponent>
           </div>
         </form>
         <div className="contact-info">

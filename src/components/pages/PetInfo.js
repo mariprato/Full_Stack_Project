@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "./PetInfo.css";
 import pets from "../../petDatabase";
 import Layout from "../layout/Layout";
+import ButtonComponent from "../ButtonComponent";
 
 const PetInfo = () => {
   const { id } = useParams()
@@ -31,7 +32,7 @@ const PetInfo = () => {
               <p><span className="pet-info-details-keys">Additional Details: </span><span className="pet-info-details-values">{pet.additionalInformation}</span></p>
             </div>
           </div>
-          <Link to = "/lostPets"><button className="return-to-pets-button">Return to All Pets</button></Link>
+          <Link to = "/lostPets"><ButtonComponent variant="button-return-to-pets">Return to All Pets</ButtonComponent></Link>
         </div>
       </Layout>
     </>
