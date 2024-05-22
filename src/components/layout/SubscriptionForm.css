@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .subscription-form form {
@@ -34,5 +34,6 @@
 }
 
 .subscription-form button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: #e63946;
 }

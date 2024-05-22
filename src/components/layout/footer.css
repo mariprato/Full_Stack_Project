@@ -38,7 +38,30 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+}
+
+.contact-icons {
+    color: white;
+}
+
+.contact-icons:nth-of-type(1):hover {
+    color: #E63946;
+    cursor: pointer;
+}
+
+.contact-icons:nth-of-type(2):hover {
+    color: #E63946;
+    cursor: pointer;
+}
+
+.contact-icons:nth-of-type(3):hover {
+    color: #E63946;
+    cursor: pointer;
+}
+
+.contact-icons:nth-of-type(4):hover {
+    color: #E63946;
+    cursor: pointer;
 }
 
 .footer-contact-icons {
@@ -63,6 +86,11 @@
     margin: 5px 0;
 }
 
+.footer-contact:hover {
+    color:#E63946;
+    cursor: pointer;
+}
+
 .footer-copyright {
     text-align: center;
     margin-top: 10px;
@@ -79,10 +107,11 @@
     margin-bottom: 10px;
 }
 
-.subscribe {
-    padding: 0px;
+.subscribe p {
+    margin: 0px;
 }
 
-.subscribe p {
-    margin-bottom: 0px;
+.footer-link-group a:hover {
+    color: #E63946;
+    cursor: pointer;
 }
