@@ -25,16 +25,24 @@ function FooterCom () {
                         className="footer-brand"
                     />
                     <p className="footer-name">Fur-Ever Found</p>
-                    <div className="social-icons">
-                        <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
-                        <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
-                        <FontAwesomeIcon className="contact-icons" icon={faThreads} />
-                        <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com">
+                            <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
+                        </a>
+                        <a href="https://www.threads.net/">
+                            <FontAwesomeIcon className="contact-icons" icon={faThreads} />
+                        </a>
+                        <a href="https://www.pinterest.com">
+                            <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+                        </a>
                     </div>
                 </div>
                 <div className="section-two">
                     <Footer.LinkGroup className="footer-link-group">
-                        <Footer.Link href="#">About Us</Footer.Link>
+                        <Footer.Link href="/aboutUs">About Us</Footer.Link>
                         <Footer.Link href="#">Privacy Policy</Footer.Link>
                         <Footer.Link href="#">Terms and Conditions</Footer.Link>
                     </Footer.LinkGroup>
@@ -52,7 +60,7 @@ function FooterCom () {
                             rel="noreferrer"
                             target="_blank"
                         >
-                            <FontAwesomeIcon className="footer-contact-icons" icon={faEnvelope} />
+                            <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
                             enquiry@fur-everfound.com
                         </a>
                     </div>

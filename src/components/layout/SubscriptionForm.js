@@ -11,12 +11,14 @@ function SubscriptionForm() {
         event.preventDefault();
         setSubmitted(true);
         setShowPopup(true);
+        localStorage.setItem("email", email);
+        console.log("Email saved to list");
     };
 
     return (
         <div className="subscription-form">
             {submitted ? (
-                <p>Submitted</p>
+                <p>Email submitted.</p>
             ) : (
                 <form onSubmit={handleSubmit}>
                     <input
@@ -31,7 +33,7 @@ function SubscriptionForm() {
             )}
             {showPopup && (
                 <div className="popup">
-                    <p>Thanks for submitting your email, we will be with you shortly.</p>
+                    <p>You will receive your Fur-Ever Found newsletter shortly.</p>
                 </div>
             )}
         </div>
