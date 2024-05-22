@@ -20,19 +20,3 @@
     max-width: 300px;
     text-align: center;
 }
-
-.subscription-form button {
-    padding: 10px 20px;
-    background-color: #e63946;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-}
-
-.subscription-form button:hover {
-    background-color: #0056b3;
-}

@@ -1,3 +1,4 @@
+import ButtonComponent from '../ButtonComponent';
 import './pagination.css';
 
 const Pagination = ({pets, activePage, setActivePage}) => {
@@ -10,9 +11,9 @@ const Pagination = ({pets, activePage, setActivePage}) => {
 
     function getClass(pageNumber){
         if (pageNumber === activePage){
-            return "active-page"
+            return "page-button-active"
         } else {
-            return "non-active-page"
+            return "page-button-non-active"
         }
     }
 
@@ -21,7 +22,7 @@ const Pagination = ({pets, activePage, setActivePage}) => {
     return ( 
         <div className = "page-button-container">
             {pageNumbers.map((pageNumber) => (
-                <button className={getClass(pageNumber)} key={pageNumber} onClick={() => setActivePage(pageNumber)}>{pageNumber}</button>
+                <ButtonComponent className={getClass(pageNumber)} key={pageNumber} onClick={() => setActivePage(pageNumber)} variant="button-page-number">{pageNumber}</ButtonComponent>
             ))}
 
         </div> 

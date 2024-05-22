@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import ButtonSubmit from './buttons/ButtonSubmit';
 import { savePost } from './PostDatabase';
+import { Button } from 'flowbite-react';
+import ButtonComponent from './ButtonComponent';
 
 function ParentComponent() {
   const [postContent, setPostContent] = useState("");
@@ -22,7 +23,7 @@ function ParentComponent() {
         onChange={(e) => setPostContent(e.target.value)}
         placeholder="Enter post content"
       />
-      <ButtonSubmit text="Save Post" onClick={handleSavePost} />
+      <ButtonComponent type="submit" variant="button-form-submit" onClick={handleSavePost}>Save Post</ButtonComponent>
     </div>
   );
 }

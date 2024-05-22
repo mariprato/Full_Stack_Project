@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './filter.css';
+import ButtonComponent from "../ButtonComponent";
 
 const Filter = ({ options, onClick, currentlySelected, filterMethod }) => {
     const [open, setOpen] = useState(false);
@@ -16,24 +17,23 @@ const Filter = ({ options, onClick, currentlySelected, filterMethod }) => {
     return (
         <div className="filter-buttons-container">
             <div>
-                <button className="filter-button" onClick={toggleOpen}>
+                <ButtonComponent variant="button-filter" onClick={toggleOpen}>
                     {filterMethod}:
-                </button>
+                </ButtonComponent>
             </div>
             {open && (
                 <div className="options-buttons-container">
                     {options.map((option, index) => (
-                        <button
+                        <ButtonComponent
                             key={index}
+                            variant="button-filter-options"
                             className={
-                                option === currentlySelected
-                                    ? "options-button current-option"
-                                    : "options-button"
+                                option === currentlySelected && "current-option"
                             }
                             onClick={() => handleOptionClick(option)}
                         >
                             {option}
-                        </button>
+                        </ButtonComponent>
                     ))}
                 </div>
             )}

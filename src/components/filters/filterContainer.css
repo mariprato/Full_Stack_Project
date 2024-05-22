@@ -3,26 +3,6 @@
     margin-bottom: 20px;
 }
 
-.filter-button {
-    background-color: #e63946;
-    border-radius: 78px;
-    border: none;
-    box-shadow: 1px 1px 0 0 white;
-    min-width: 150px;
-    min-height: 30px;
-    padding: 5px;
-    color: #F1FAEE;
-    text-align: center;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 15px;
-    font-weight: bolder;
-    margin-right: 10px;
-}
-.filter-button:hover {
-    background-color: var(--White, #FFF); 
-    color: #e63946; 
-}
-
 .filters-container {
     display: flex;
     flex-direction: column;

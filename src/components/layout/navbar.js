@@ -9,8 +9,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import ButtonPostNow from "../ButtonPostNow";
 import { useLocation, useNavigate } from "react-router-dom";
+import ButtonComponent from "../ButtonComponent";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ const Navbar = () => {
           <a className="overlay-links" onClick={() => navigate("/aboutUs")}>
             About Us
           </a>
-          <ButtonPostNow text="Post Now" />
+          <ButtonComponent variant="button-post-pink" onClick={() => navigate("/submissionForm")}>Post Now</ButtonComponent>
         </div>
       </div>
     </nav>
