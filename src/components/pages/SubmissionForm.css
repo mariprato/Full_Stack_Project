@@ -2,11 +2,22 @@
   padding-top: 50px;
   text-align: center;
   background: #1D3557;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .submission-form-container h1 {
+  margin-top: 50px;
   margin-bottom: 20px;
   color: #fff;
+}
+
+.submission-form-container p {
+  max-width: 600px;
+  margin-bottom: 30px;
 }
 
 .submission-form {
@@ -20,11 +31,13 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .form-group {
   width: 100%;
   margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
 .image-upload {
@@ -36,7 +49,8 @@
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
-  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .image-upload label {
@@ -67,6 +81,7 @@ textarea {
   border: 2px solid #e63946;
   border-radius: 5px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 textarea {
@@ -99,3 +114,14 @@ textarea {
   border: 1px solid #d6e9c6;
   border-radius: 4px;
 }
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.disclaimer a {
+  color: #007bff;
+  text-decoration: underline;
+}
+

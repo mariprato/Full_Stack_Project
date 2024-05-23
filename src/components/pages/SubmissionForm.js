@@ -73,23 +73,26 @@ const SubmissionForm = () => {
     <>
       <Layout>
         <div className="submission-form-container">
-          <h1>Post Your Lost Pet Now</h1>
+          <h1>Post Your Lost Pet</h1>
+          <p>Please fill in the details below, and a member of the Fur-Ever Found team will review and post your information on our lost pets page, to help reunite you with your pet.</p>
           {confirmationMessage && (
             <div className="confirmation-message">
               {confirmationMessage}
             </div>
           )}
           <form className="submission-form" onSubmit={handleSubmit}>
-            <div className="form-group image-upload">
-              <label>
-                <span>Browse</span>
-                <input
-                  type="file"
-                  name="image"
-                  accept="image/*"
-                  onChange={handleChange}
-                />
-              </label>
+            <div className="form-group">
+              <div className="image-upload">
+                <label>
+                  <span>Browse</span>
+                  <input
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    onChange={handleChange}
+                  />
+                </label>
+              </div>
             </div>
             <div className="form-group">
               <input
@@ -162,14 +165,7 @@ const SubmissionForm = () => {
               <ButtonComponent type="submit" variant="button-form-submit">Submit</ButtonComponent>
             </div>
           </form>
-          <div className="contact-info">
-            <div className="contact-item">
-              <i className="fa fa-phone"></i> (000) 000 000
-            </div>
-            <div className="contact-item">
-              <i className="fa fa-envelope"></i> info@fur-everfound.com
-            </div>
-          </div>
+          <p className="disclaimer">*By pressing submit you accept our <a href="#">terms and conditions</a>.</p>
         </div>
       </Layout>
     </>
