@@ -20,11 +20,8 @@ const PetCard = ({pet}) => {
                     <img className="banner-picture" src="../images/banner.png"/>
                 </div>}
 
-                <div className="background-image">
-                    <img className="pet-image" src={`../images/${pet.id}.jpg`}></img>
-                </div>
-                <div className="foreground-image">
-                    <img className = "pet-image" src={`../images/${pet.id}.jpg`} alt = {`Image of ${pet.name} the lost ${pet.type}.`}></img>
+                <div>
+                    <img className="pet-image" src={`../images/${pet.id}.jpg`} alt={`${pet.name} the lost ${pet.type}.`}></img>
                 </div>
             </div>
             <div className = "pet-card-text"><p>{pet.name}, {pet.location}</p></div>

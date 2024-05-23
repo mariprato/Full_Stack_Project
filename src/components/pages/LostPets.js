@@ -136,7 +136,7 @@ const LostPets = () => {
             </div>
           </FilterContainer>
 
-          <div className="petCardsContainer">
+          <div className="pet-cards-container">
             {petsToDisplay.map((pet) => (
               <PetCard key={pet.id} pet={pet} />
             ))}
