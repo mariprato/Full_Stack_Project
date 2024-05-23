@@ -6,7 +6,7 @@ import Pagination from "../layout/pagination.js";
 import Filter from "../filters/filter.js";
 import FilterContainer from "../filters/filterContainer.js";
 import Layout from "../layout/Layout.js";
-import ButtonComponent from "../ButtonComponent"; // Import ButtonComponent
+import ButtonComponent from "../ButtonComponent";
 import { useLocation } from 'react-router-dom';
 
 const LostPets = () => {
