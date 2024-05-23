@@ -74,7 +74,7 @@ const SubmissionForm = () => {
       <Layout>
         <div className="submission-form-container">
           <h1>Post Your Lost Pet</h1>
-          <p>Please fill in the details below, and a member of the Fur-Ever Found team will review and post your information on our lost pets page, to help reunite you with your pet.</p>
+          <p>Please fill in the details below, and a member of the Fur-Ever Found team will review and post your information on our lost pets page to help reunite you with your pet.</p>
           {confirmationMessage && (
             <div className="confirmation-message">
               {confirmationMessage}
