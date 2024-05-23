@@ -3,21 +3,13 @@ import PetCard from "../PetCard";
 import pets from "../../petDatabase.js";
 import "./LostPets.css";
 import Pagination from "../layout/pagination.js";
-import Navbar from "../layout/navbar.js";
 import Filter from "../filters/filter.js";
 import FilterContainer from "../filters/filterContainer.js";
 import Layout from "../layout/Layout.js";
+import ButtonComponent from "../ButtonComponent";
+import { useLocation } from 'react-router-dom';
 
 const LostPets = () => {
-  function shuffleArray(array) {
-    // Fisher-Yates shuffle algorithm
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
-
   function getPetArray(pets) {
     const indexToStart = (activePage - 1) * 8;
     return pets.slice(indexToStart, indexToStart + 8);
@@ -57,7 +49,7 @@ const LostPets = () => {
   }
 
   function filterPets() {
-    let newFilteredPets = [...pets]; // Use the original, unshuffled array so it doesn't break the filter code
+    let newFilteredPets = [...pets];
     if (typeFilter !== "All") {
       newFilteredPets = newFilteredPets.filter(
         (pet) => pet.type === typeFilter
@@ -76,7 +68,11 @@ const LostPets = () => {
     setFilteredPets(newFilteredPets);
   }
 
-  const [activePage, setActivePage] = useState(1);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const initialPage = parseInt(searchParams.get('page')) || 1;
+
+  const [activePage, setActivePage] = useState(initialPage);
   const [petsToDisplay, setPetsToDisplay] = useState([]);
   const [filteredPets, setFilteredPets] = useState([...pets]);
   const [typeFilter, setTypeFilter] = useState("All");
@@ -97,9 +93,12 @@ const LostPets = () => {
     filterPets();
   }, [typeFilter, locationFilter, foundFilter]);
 
-  useEffect(() => {
-    shuffleArray(pets);
-  }, []);
+  // Function to clear all filters
+  function clearFilters() {
+    setTypeFilter("All");
+    setLocationFilter("All");
+    setFoundFilter("All");
+  }
 
   return (
     <>
@@ -126,6 +125,14 @@ const LostPets = () => {
                 currentlySelected={foundFilter}
                 filterMethod="Status"
               />
+              {/* NEW CLEAR FILTER BUTTON */}
+              <ButtonComponent
+                variant="button-filter"
+                onClick={clearFilters}
+                className="clear-filters-margin"
+              >
+                Clear Filters
+              </ButtonComponent>
             </div>
           </FilterContainer>
 

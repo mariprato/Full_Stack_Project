@@ -48,9 +48,9 @@
 }
 
 .white-bg-pink-text {
-    background-color: #ffffff; /* Set initial background color */
+    background-color: #ffffff;
     box-shadow: 1px 1px 0 0 #e63946;
-    color: #e63946; /* Set initial text color */
+    color: #e63946;
 }
 
 .white-bg-pink-text:hover {
