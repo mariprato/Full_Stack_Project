@@ -129,6 +129,7 @@ const LostPets = () => {
               <ButtonComponent
                 variant="button-filter"
                 onClick={clearFilters}
+                className="clear-filters-margin"
               >
                 Clear Filters
               </ButtonComponent>

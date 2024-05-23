@@ -1,7 +1,6 @@
 .filter-buttons-container {
     display: flex;
     margin-bottom: 20px;
-    border: solid green 5px;
 }
 
 .filters-container {
@@ -11,7 +10,6 @@
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
-    border: solid green 5px;
 }
 
 
