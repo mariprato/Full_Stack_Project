@@ -42,8 +42,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute; /* Positioning absolutely within the image-section */
-    bottom: 20px; /* Adjust as necessary to position above the bottom edge of the image */
+    position: absolute;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;

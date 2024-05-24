@@ -1,17 +1,45 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./HowTo.css";
+import ButtonComponent from "./ButtonComponent";
 
 const HowTo = () => {
+  const navigate = useNavigate();
+
+  const goToSubmissionForm = () => {
+    navigate("/submissionForm");
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
+  const goToLostPets = () => {
+    navigate("/lostPets");
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
+
   return (
     <div id="how-to-section">
-      <h1>How Fur-Ever Found Works</h1>
+      <h1>
+        How{" "}
+        <img src="/images/fureverfound.png" alt="Logo" className="how-title" />{" "}
+        Works
+      </h1>
       <div className="how-container">
         <div className="how-top">
-          <h1>My Pet Is Lost</h1>
+          <h2>My Pet Is Lost</h2>
           <img src="/images/LostPet.jpg" />
+          <ButtonComponent
+            variant="button-post-pink"
+            onClick={goToSubmissionForm}
+          >
+            Post Now
+          </ButtonComponent>
         </div>
         <div className="how-bottom">
-          <h1>I Have Seen a Lost Pet</h1>
+          <h2>I Have Seen a Lost Pet</h2>
           <img src="/images/LostPet.jpg" />
+          <ButtonComponent variant="button-post-pink" onClick={goToLostPets}>
+            Lost Pets
+          </ButtonComponent>
         </div>
       </div>
     </div>
