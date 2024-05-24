@@ -18,34 +18,34 @@ const LostPets = () => {
   const [activePage, setActivePage] = useState(initialPage);
   const [petsToDisplay, setPetsToDisplay] = useState([]);
   const [filteredPets, setFilteredPets] = useState([...pets]);
-  const [typeFilter, setTypeFilter] = useState('All');
-  const [locationFilter, setLocationFilter] = useState('All');
-  const [foundFilter, setFoundFilter] = useState('All');
+  const [typeFilter, setTypeFilter] = useState(sessionStorage.getItem('typeFilter') || 'All');
+  const [locationFilter, setLocationFilter] = useState(sessionStorage.getItem('locationFilter') || 'All');
+  const [statusFilter, setStatusFilter] = useState(sessionStorage.getItem('statusFilter') || 'All');
 
-  function getPetArray(pets) {
+  const getPetArray = (pets) => {
     const indexToStart = (activePage - 1) * 8;
     return pets.slice(indexToStart, indexToStart + 8);
-  }
+  };
 
-  function getPetCategories(filteredPets) {
+  const getPetCategories = (filteredPets) => {
     let output = ['All'];
     for (let i = 0; i < filteredPets.length; ++i) {
       output.push(filteredPets[i]['type']);
     }
     let filteredOutput = output.filter((item, index) => output.indexOf(item) === index);
     return filteredOutput;
-  }
+  };
 
-  function getLocationCategories(filteredPets) {
+  const getLocationCategories = (filteredPets) => {
     let output = ['All'];
     for (let i = 0; i < filteredPets.length; ++i) {
       output.push(filteredPets[i]['location']);
     }
     let filteredOutput = output.filter((item, index) => output.indexOf(item) === index);
     return filteredOutput;
-  }
+  };
 
-  function getStatusCategories(filteredPets) {
+  const getStatusCategories = (filteredPets) => {
     const statusOptions = ['All'];
     if (filteredPets.some((pet) => pet.found === true)) {
       statusOptions.push('Found');
@@ -54,9 +54,13 @@ const LostPets = () => {
       statusOptions.push('Lost');
     }
     return statusOptions;
-  }
+  };
 
-  function filterPets() {
+  const filterPets = () => {
+    console.log('Filtering pets...');
+    console.log('Type Filter:', typeFilter);
+    console.log('Location Filter:', locationFilter);
+    console.log('Status Filter:', statusFilter); // Updated log message
     let newFilteredPets = [...pets];
     if (typeFilter !== 'All') {
       newFilteredPets = newFilteredPets.filter((pet) => pet.type === typeFilter);
@@ -64,13 +68,13 @@ const LostPets = () => {
     if (locationFilter !== 'All') {
       newFilteredPets = newFilteredPets.filter((pet) => pet.location === locationFilter);
     }
-    if (foundFilter === 'Found') {
+    if (statusFilter === 'Found') {
       newFilteredPets = newFilteredPets.filter((pet) => pet.found === true);
-    } else if (foundFilter === 'Lost') {
+    } else if (statusFilter === 'Lost') {
       newFilteredPets = newFilteredPets.filter((pet) => pet.found === false);
     }
     setFilteredPets(newFilteredPets);
-  }
+  };
 
   useEffect(() => {
     setPetsToDisplay(getPetArray(filteredPets));
@@ -78,7 +82,7 @@ const LostPets = () => {
 
   useEffect(() => {
     filterPets();
-  }, [typeFilter, locationFilter, foundFilter]);
+  }, [typeFilter, locationFilter, statusFilter]);
 
   useEffect(() => {
     const initialPage = parseInt(searchParams.get('page')) || 1;
@@ -92,55 +96,74 @@ const LostPets = () => {
     sessionStorage.setItem('lastVisitedPage', activePage);
   }, [activePage]);
 
-  function clearFilters() {
+  useEffect(() => {
+    sessionStorage.setItem('typeFilter', typeFilter);
+  }, [typeFilter]);
+
+  useEffect(() => {
+    sessionStorage.setItem('locationFilter', locationFilter);
+  }, [locationFilter]);
+
+  useEffect(() => {
+    sessionStorage.setItem('statusFilter', statusFilter);
+  }, [statusFilter]);
+
+  const clearFilters = () => {
     setTypeFilter('All');
     setLocationFilter('All');
-    setFoundFilter('All');
-  }
+    setStatusFilter('All');
+  };
 
   return (
-    <>
-      <Layout>
-        <div className="lost-pets-layout">
-          <h1>Lost Pets</h1>
-          <FilterContainer>
-            <div className="filter-buttons-container">
-              <Filter
-                options={getPetCategories(filteredPets)}
-                onClick={(option) => setTypeFilter(option)}
-                currentlySelected={typeFilter}
-                filterMethod="Type"
-              />
-              <Filter
-                options={getLocationCategories(filteredPets)}
-                onClick={(option) => setLocationFilter(option)}
-                currentlySelected={locationFilter}
-                filterMethod="Location"
-              />
-              <Filter
-                options={getStatusCategories(filteredPets)}
-                onClick={(option) => setFoundFilter(option)}
-                currentlySelected={foundFilter}
-                filterMethod="Status"
-              />
-              <ButtonComponent
-                variant="button-filter"
-                onClick={clearFilters}
-                className="clear-filters-margin"
-              >
-                Clear Filters
-              </ButtonComponent>
-            </div>
-          </FilterContainer>
-          <div className="pet-cards-container">
-            {petsToDisplay.map((pet) => (
-              <PetCard key={pet.id} pet={pet} />
-            ))}
+    <Layout>
+      <div className="lost-pets-layout">
+        <h1>Lost Pets</h1>
+        <FilterContainer>
+          <div className="filter-buttons-container">
+            <Filter
+              options={getPetCategories(filteredPets)}
+              onClick={(option) => {
+                console.log('Selected Type Filter:', option);
+                setTypeFilter(option);
+              }}
+              currentlySelected={typeFilter}
+              filterMethod="Type"
+            />
+            <Filter
+              options={getLocationCategories(filteredPets)}
+              onClick={(option) => {
+                console.log('Selected Location Filter:', option);
+                setLocationFilter(option);
+              }}
+              currentlySelected={locationFilter}
+              filterMethod="Location"
+            />
+            <Filter
+              options={getStatusCategories(filteredPets)}
+              onClick={(option) => {
+                console.log('Selected Status Filter:', option);
+                setStatusFilter(option);
+              }}
+              currentlySelected={statusFilter}
+              filterMethod="Status"
+            />
+            <ButtonComponent
+              variant="button-filter"
+              onClick={clearFilters}
+              className="clear-filters-margin"
+            >
+              Clear Filters
+            </ButtonComponent>
           </div>
-          <Pagination pets={filteredPets} activePage={activePage} setActivePage={setActivePage} />
+        </FilterContainer>
+        <div className="pet-cards-container">
+          {petsToDisplay.map((pet) => (
+            <PetCard key={pet.id} pet={pet} />
+          ))}
         </div>
-      </Layout>
-    </>
+        <Pagination pets={filteredPets} activePage={activePage} setActivePage={setActivePage} />
+      </div>
+    </Layout>
   );
 };
 
