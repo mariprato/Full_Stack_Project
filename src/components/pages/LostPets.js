@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import PetCard from '../PetCard';
 import pets from '../../petDatabase.js';
 import './LostPets.css';
@@ -13,6 +13,7 @@ const LostPets = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const initialPage = parseInt(searchParams.get('page')) || 1;
+  const navigate = useNavigate();
 
   const [activePage, setActivePage] = useState(initialPage);
   const [petsToDisplay, setPetsToDisplay] = useState([]);
@@ -78,6 +79,18 @@ const LostPets = () => {
   useEffect(() => {
     filterPets();
   }, [typeFilter, locationFilter, foundFilter]);
+
+  useEffect(() => {
+    const initialPage = parseInt(searchParams.get('page')) || 1;
+    setActivePage(initialPage);
+    if (!searchParams.get('page')) {
+      navigate(`${location.pathname}?page=1`);
+    }
+  }, [location, navigate, searchParams]);
+
+  useEffect(() => {
+    sessionStorage.setItem('lastVisitedPage', activePage);
+  }, [activePage]);
 
   function clearFilters() {
     setTypeFilter('All');

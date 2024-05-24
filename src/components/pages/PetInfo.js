@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import './PetInfo.css';
 import pets from '../../petDatabase';
@@ -12,6 +12,10 @@ const PetInfo = () => {
   const activePage = searchParams.get('page') || 1;
 
   const pet = pets.find((pet) => pet.id === parseInt(id));
+
+  useEffect(() => {
+    sessionStorage.setItem('lastVisitedPage', activePage);
+  }, [activePage]);
 
   return (
     <>
@@ -51,7 +55,7 @@ const PetInfo = () => {
               </p>
             </div>
           </div>
-          <Link to={`/lostPets?page=${activePage}`}>
+          <Link to={`/lostPets?page=${sessionStorage.getItem('lastVisitedPage') || 1}`}>
             <ButtonComponent variant="button-return-to-pets">Return to All Pets</ButtonComponent>
           </Link>
         </div>
