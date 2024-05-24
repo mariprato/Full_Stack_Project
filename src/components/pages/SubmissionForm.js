@@ -32,6 +32,14 @@ const SubmissionForm = () => {
     }
   };
 
+  const handleImageRemove = () => {
+    document.getElementById('fileInput').value = "";
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      image:null,
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted with data:", formData);
@@ -80,19 +88,31 @@ const SubmissionForm = () => {
               {confirmationMessage}
             </div>
           )}
+          
           <form className="submission-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <div className="image-upload">
-                <label>
-                  <span>Browse</span>
-                  <input
-                    type="file"
-                    name="image"
-                    accept="image/*"
-                    onChange={handleChange}
-                  />
-                </label>
+              <div className="image-upload-header">
+                <h3>Upload your image</h3>
+                <p>Please upload a recent picture of your pet for us to share</p>
               </div>
+              <label htmlFor="fileInput" className="image-upload">
+                {formData.image ? (
+                  <div className="uploaded-image">
+                    {formData.image.name}
+                    <button onClick={handleImageRemove}>X</button>
+                  </div>
+                ) : (
+                  <span>Browse</span>
+                )}
+                <input
+                  id="fileInput"
+                  type="file"
+                  name="image"
+                  accept="image/*"
+                  onChange={handleChange}
+                  style={{ display: 'none' }}
+                />
+              </label>
             </div>
             <div className="form-group">
               <input
