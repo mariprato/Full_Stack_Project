@@ -125,6 +125,8 @@ const LostPets = () => {
               onClick={(option) => {
                 console.log('Selected Type Filter:', option);
                 setTypeFilter(option);
+                setActivePage(1)
+                navigate(`/lostPets?page=1`);
               }}
               currentlySelected={typeFilter}
               filterMethod="Type"
@@ -134,6 +136,8 @@ const LostPets = () => {
               onClick={(option) => {
                 console.log('Selected Location Filter:', option);
                 setLocationFilter(option);
+                setActivePage(1)
+                navigate(`/lostPets?page=1`);
               }}
               currentlySelected={locationFilter}
               filterMethod="Location"
@@ -143,6 +147,8 @@ const LostPets = () => {
               onClick={(option) => {
                 console.log('Selected Status Filter:', option);
                 setStatusFilter(option);
+                setActivePage(1)
+                navigate(`/lostPets?page=1`);
               }}
               currentlySelected={statusFilter}
               filterMethod="Status"
