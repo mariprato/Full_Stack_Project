@@ -1,0 +1,14 @@
+.how-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .how-top {
+    /* Additional styles for the top section */
+    margin-bottom: 20px; /* Optional: adds space between top and bottom sections */
+  }
+  
+  .how-bottom {
+    /* Additional styles for the bottom section */
+  }
+  
