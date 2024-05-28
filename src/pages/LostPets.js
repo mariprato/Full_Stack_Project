@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import PetCard from '../components/cards/PetCard.jsx';
 import pets from "../databases/petDatabase.js";
 import './LostPets.css';
-import Pagination from '../components/generic/pagination.js';
+import Pagination from '../components/generic/pagination/pagination.js';
 import Filter from '../components/filters/filter.js';
 import FilterContainer from '../components/filters/filterContainer.js';
 import Layout from '../components/layout/Layout.js';
