@@ -15,8 +15,8 @@ describe('<HowTo/>', () => {
         render(<HowTo/>);
         const petLostHeader = screen.getByText(/My Pet Is Lost/i);
         const foundPetHeader = screen.getByText(/I Have Seen a Lost Pet/i);
-        expect(petLostHeader).toBeInTheDocument;
-        expect(foundPetHeader).toBeInTheDocument;
+        expect(petLostHeader).toBeInTheDocument();
+        expect(foundPetHeader).toBeInTheDocument();
         });
 
     test('should call useNavigate when button clicked', () => {

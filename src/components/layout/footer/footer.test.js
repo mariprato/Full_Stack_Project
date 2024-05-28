@@ -13,7 +13,7 @@ describe('<Footer/>', () => {
     test('should render email address', () => {
         render(<FooterCom/>);
         const emailAddress = screen.getByText(/enquiry@fur-everfound.com/i)
-        expect(emailAddress).toBeInTheDocument;
+        expect(emailAddress).toBeInTheDocument();
         });
     
 

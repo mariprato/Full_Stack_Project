@@ -8,7 +8,7 @@ describe('<ButtonComponent/>', () => {
     test('should render component', () => {
         render(<ButtonComponent>Testing Button</ButtonComponent>);
         const buttonElement = screen.getByText(/Testing Button/i)
-        expect(buttonElement).toBeInTheDocument;
+        expect(buttonElement).toBeInTheDocument();
         });
     
     test('should be assigned className by variant', () => {

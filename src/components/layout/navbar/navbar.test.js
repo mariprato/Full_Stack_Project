@@ -16,7 +16,7 @@ describe('<Navbar/>', () => {
     test('should render phone number', () => {
         render(<Navbar/>);
         const contactNumber = screen.getByText(/000 000/i)
-        expect(contactNumber).toBeInTheDocument;
+        expect(contactNumber).toBeInTheDocument();
         });
 
     test('should call useNavigate when a page is clicked', () => {
