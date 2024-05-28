@@ -6,7 +6,7 @@ import './LostPets.css';
 import Pagination from '../components/generic/pagination/pagination.js';
 import Filter from '../components/filters/filter.js';
 import FilterContainer from '../components/filters/filterContainer.js';
-import Layout from '../components/layout/Layout.js';
+import Layout from '../components/layout/layout/Layout.js';
 import ButtonComponent from '../components/generic/button/ButtonComponent.js';
 
 const LostPets = () => {

@@ -1,5 +1,5 @@
-import FooterCom from "./footer/footer";
-import Navbar from "./navbar/navbar";
+import FooterCom from "../footer/footer";
+import Navbar from "../navbar/navbar";
 import "./Layout.css";
 import { useLocation } from "react-router-dom";
 
