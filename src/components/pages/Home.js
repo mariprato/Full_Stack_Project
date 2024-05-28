@@ -1,19 +1,16 @@
 import React from "react";
-import Navbar from "../layout/navbar";
 import Header from "../layout/header";
-import Footer from "../layout/footer";
+import Layout from "../layout/Layout";
+import HowTo from "../HowTo";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Header />
-      <div>
-        <h1>This is the home page</h1>
-      </div>
-      <Footer />
+      <Layout>
+        <Header />
+        <HowTo />
+      </Layout>
     </>
-    
   );
 };
 

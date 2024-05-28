@@ -1,7 +1,9 @@
+import ButtonComponent from '../ButtonComponent';
 import './pagination.css';
+import { useNavigate } from 'react-router-dom';
 
 const Pagination = ({pets, activePage, setActivePage}) => {
-
+    const navigate = useNavigate();
 
     function getPageNumbers(){
         const totalPages = Math.ceil(pets.length / 8)
@@ -9,23 +11,23 @@ const Pagination = ({pets, activePage, setActivePage}) => {
     }
 
     function getClass(pageNumber){
-        if (pageNumber === activePage){
-            return "active-page"
-        } else {
-            return "non-active-page"
-        }
+        return pageNumber === activePage ? "page-button-active" : "page-button-non-active";
+    }
+
+    function handlePageChange(pageNumber){
+        setActivePage(pageNumber);
+        navigate(`/lostPets?page=${pageNumber}`);
     }
 
     const pageNumbers = getPageNumbers();
 
     return ( 
-        <div className = "page-button-container">
+        <div className="page-button-container">
             {pageNumbers.map((pageNumber) => (
-                <button className={getClass(pageNumber)} key={pageNumber} onClick={() => setActivePage(pageNumber)}>{pageNumber}</button>
+                <ButtonComponent className={getClass(pageNumber)} key={pageNumber} onClick={() => handlePageChange(pageNumber)} variant="button-page-number">{pageNumber}</ButtonComponent>
             ))}
-
         </div> 
     );
 }
- 
+
 export default Pagination;

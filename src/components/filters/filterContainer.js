@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './filterContainer.css';
+import ButtonComponent from "../ButtonComponent";
 
 const FilterContainer = ({children}) => {
     const [open, setOpen] = useState(false)
@@ -11,7 +12,7 @@ const FilterContainer = ({children}) => {
     return ( 
         <div className="page-container">
             <div>
-                <button className="filter-button" onClick={toggleOpen}>Filter by:</button>
+                <ButtonComponent variant="button-filter" onClick={toggleOpen}>Filter by:</ButtonComponent>
             </div>
             <div className="filters-container">
                 {open && 

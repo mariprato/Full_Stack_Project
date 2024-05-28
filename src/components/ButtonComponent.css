@@ -1,0 +1,116 @@
+.button-standard {
+    border-radius: 78px;
+    border: none;
+    height: 35px;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.small {
+    width: 50px;
+}
+
+.medium {
+    width: 100px;
+}
+
+.large {
+    width: 150px;
+}
+
+.pink-bg-white-text {
+    background-color: #e63946;
+    border-color: #e63946;
+    color: var(--White, #FFF); 
+    box-shadow: 1px 1px 0 0 #1D3557; 
+}
+
+.pink-bg-white-text:hover {
+    background-color: var(--White, #FFF); 
+    color: #e63946; 
+}
+
+.white-bg-blue-text {
+    background-color: white;
+    color: #118ab2; 
+    box-shadow: 1px 1px 0 0 #118ab2;
+}
+
+.white-bg-blue-text:hover {
+    background-color: #118ab2; 
+    color: white;
+}
+
+.white-bg-pink-text {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 0 0 #e63946;
+    color: #e63946;
+}
+
+.white-bg-pink-text:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+.filter-button {
+    box-shadow: 1px 1px 0 0 white;
+    min-width: 150px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.options-button {
+    border-radius: 0px;
+    border-bottom: 1px solid #ccc;
+    min-width: 120px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.options-button:last-child {
+    border-bottom: none;
+}
+
+.current-option {
+    background-color: #e63946;
+    color: #F1FAEE;
+}
+
+.page-button {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #1D3557;
+    margin: 1%;
+    border-radius: 4px;
+
+}
+
+.page-button-active {
+    background-color: #A8DADC;
+}
+
+.page-button-non-active {
+    background-color: #F1FAEE;
+}
+
+.newsletter-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter-button:hover {
+    background-color: #0056b3;
+    color: white;
+}

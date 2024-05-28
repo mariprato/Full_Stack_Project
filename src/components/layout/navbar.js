@@ -9,11 +9,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import ButtonPostNow from "../buttons/ButtonPostNow";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import ButtonComponent from "../ButtonComponent";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <nav>
@@ -53,7 +54,17 @@ const Navbar = () => {
       </div>
       <div className="overlay">
         <div className="logo" onClick={() => navigate("/")}>
-          <img src="/images/MagicEraser_240512_152556 2.png" />
+          <img
+            src="/images/MagicEraser_240512_152556 2.png"
+            alt="Fur-Ever Found Logo of cute cat and dog"
+          />
+        </div>
+        <div className="overlay-middle">
+          <div className="fur-ever-navbar" onClick={() => navigate("/")}>
+            {location.pathname !== "/" && (
+              <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
+            )}
+          </div>
         </div>
         <div className="overlay-right">
           <a className="overlay-links" onClick={() => navigate("/")}>
@@ -65,7 +76,7 @@ const Navbar = () => {
           <a className="overlay-links" onClick={() => navigate("/aboutUs")}>
             About Us
           </a>
-          <ButtonPostNow text="Post Now" />
+          <ButtonComponent variant="button-post-pink" onClick={() => { navigate("/submissionForm"); window.location.reload(); }}>Post Now</ButtonComponent>
         </div>
       </div>
     </nav>

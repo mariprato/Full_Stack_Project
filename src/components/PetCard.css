@@ -13,32 +13,18 @@
 }
 
 .pet-image-container {
-    display: grid;
-    grid-template-columns: repeat(36, 1fr);
+    display: flex;
     position: relative;
     width: 80%;
   }
 
 
-.foreground-image {
-    position: absolute;
-    grid-column: 1 / span 35;
-    grid-row: 1; 
-    z-index: 1;
-}
-
-.background-image {
-    grid-column: 2 / -1;
-    grid-row: 1;
-    padding-top: 5%; 
-    box-shadow: #E63946 5px 5px 5px, inset #E63946  10px 10px 50px;
-    border-radius: 2px;
-}
-
 .pet-image {
     width: 100%;
     display: block;
     border: solid 1px #1D3557;
+    box-shadow: #E63946 5px 5px 5px, inset #E63946  10px 10px 50px;
+    border-radius: 2px;
 
 }
 
