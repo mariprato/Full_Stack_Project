@@ -14,8 +14,8 @@
   
 
 
-  #how-to-section h1 {
-    font-size: 2em; /* Adjust the font size of the main heading if needed */
+#how-to-section h1 {
+    font-size: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,12 +26,7 @@
     padding-bottom: 100px;
 }
 
-.how-top h2, .how-bottom h2 {
-    /* Add styles for the headings in the top and bottom sections if needed */
-}
-
-.how-top img, .how-bottom img {
-    /* Add styles for the images in the top and bottom sections if needed */
+.how-top img, .how-bottom-img {
     display: block;
     margin: 0 auto;
 }
@@ -43,5 +38,5 @@
 }
 
 .how-top button {
-    margin-top: 20px; /* Adjust margin to control spacing around the button */
+    margin-top: 20px;
 }

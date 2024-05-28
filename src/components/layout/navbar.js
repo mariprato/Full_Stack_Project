@@ -54,12 +54,15 @@ const Navbar = () => {
       </div>
       <div className="overlay">
         <div className="logo" onClick={() => navigate("/")}>
-          <img src="/images/MagicEraser_240512_152556 2.png" />
+          <img
+            src="/images/MagicEraser_240512_152556 2.png"
+            alt="Fur-Ever Found Logo of cute cat and dog"
+          />
         </div>
         <div className="overlay-middle">
           <div className="fur-ever-navbar" onClick={() => navigate("/")}>
             {location.pathname !== "/" && (
-              <img src="/images/fureverfound.png" alt="Logo" />
+              <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
             )}
           </div>
         </div>
@@ -73,7 +76,12 @@ const Navbar = () => {
           <a className="overlay-links" onClick={() => navigate("/aboutUs")}>
             About Us
           </a>
-          <ButtonComponent variant="button-post-pink" onClick={() => navigate("/submissionForm")}>Post Now</ButtonComponent>
+          <ButtonComponent
+            variant="button-post-pink"
+            onClick={() => navigate("/submissionForm")}
+          >
+            Post Now
+          </ButtonComponent>
         </div>
       </div>
     </nav>

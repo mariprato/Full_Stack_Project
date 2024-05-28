@@ -19,9 +19,9 @@ function Header() {
       <div className="image-section">
         <img src="images/Header.jpeg" alt="Header Image" />
       </div>
-      <div className="arrow-down" onClick={scrollToHowTo}>
+      {/* <div className="arrow-down" onClick={scrollToHowTo}>
         <FontAwesomeIcon icon={faArrowDown} />
-      </div>
+      </div> */}
     </>
   );
 }

@@ -13,20 +13,24 @@ const HowTo = () => {
 
   const goToLostPets = () => {
     navigate("/lostPets");
-    window.scrollTo(0, 0); // Scrolls to the top of the page
+    window.scrollTo(0, 0);
   };
 
   return (
     <div id="how-to-section">
       <h1>
         How{" "}
-        <img src="/images/fureverfound.png" alt="Logo" className="how-title" />{" "}
+        <img
+          src="/images/fureverfound.png"
+          alt="Fur-Ever Found Logo"
+          className="how-title"
+        />{" "}
         Works
       </h1>
       <div className="how-container">
         <div className="how-top">
           <h2>My Pet Is Lost</h2>
-          <img src="/images/LostPet.jpg" />
+          <img className="how-top-img" src="/images/LostPet.jpg" alt="" />
           <ButtonComponent
             variant="button-post-pink"
             onClick={goToSubmissionForm}
@@ -36,7 +40,7 @@ const HowTo = () => {
         </div>
         <div className="how-bottom">
           <h2>I Have Seen a Lost Pet</h2>
-          <img src="/images/LostPet.jpg" />
+          <img className="how-bottom-img" src="/images/LostPet.jpg" alt="" />
           <ButtonComponent variant="button-post-pink" onClick={goToLostPets}>
             Lost Pets
           </ButtonComponent>
