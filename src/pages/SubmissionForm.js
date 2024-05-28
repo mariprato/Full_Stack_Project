@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import './SubmissionForm.css';
 import ButtonComponent from "../components/generic/button/ButtonComponent.js";
 import Layout from "../components/layout/Layout.js";
@@ -15,16 +15,32 @@ const SubmissionForm = () => {
   });
 
   const [confirmationMessage, setConfirmationMessage] = useState("");
+  const locationInputRef = useRef(null);
+
+  useEffect(() => {
+    if (window.google) {
+      const autocomplete = new window.google.maps.places.Autocomplete(locationInputRef.current, {
+        types: ["address"],
+      });
+      autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        if (place && place.formatted_address) {
+          setFormData((prevFormData) => ({
+            ...prevFormData,
+            locationLost: place.formatted_address,
+          }));
+        }
+      });
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    console.log(`Changed field: ${name}, Value: ${value}, Files: ${files}`);
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: files ? files[0] : value,
     }));
 
-    // Additional validation to mark fields as touched
     if (value.trim() === "") {
       e.target.classList.add("touched");
     } else {
@@ -36,36 +52,30 @@ const SubmissionForm = () => {
     document.getElementById('fileInput').value = "";
     setFormData((prevFormData) => ({
       ...prevFormData,
-      image:null,
+      image: null,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted with data:", formData);
-    
-    // Check if any field is empty
+
     const emptyFields = Object.values(formData).some((val) => val === "");
-    if (emptyFields) {
-      alert("Please fill in all fields.");
+    if (emptyFields || !formData.image) {
+      alert("Please fill in all fields, including uploading a photo.");
       return;
     }
 
-    // Retrieve existing posts from local storage or initialize an empty array
     const savedPosts = JSON.parse(localStorage.getItem("lostPets")) || [];
     console.log("Retrieved saved posts from local storage:", savedPosts);
 
-    // Add the current form data to the array of saved posts
     savedPosts.push(formData);
     console.log("Updated saved posts array:", savedPosts);
 
-    // Save the updated posts array back to local storage
     localStorage.setItem("lostPets", JSON.stringify(savedPosts));
     console.log("Post saved to local storage");
 
-    setConfirmationMessage(`We have received the information of ${formData.petName} and will be letting you know as soon as the post is up on our Lost Pets page.`);
+    setConfirmationMessage(`We have received the information from ${formData.petName} and will be letting you know as soon as the post is up on our Lost Pets page.`);
     
-    // Reset form data
     setFormData({
       image: null,
       name: "",
@@ -89,7 +99,7 @@ const SubmissionForm = () => {
             </div>
           )}
           
-          <form className="submission-form" onSubmit={handleSubmit}>
+          <form className="submission-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">
               <div className="image-upload-header">
                 <h3>Upload your image</h3>
@@ -99,7 +109,7 @@ const SubmissionForm = () => {
                 {formData.image ? (
                   <div className="uploaded-image">
                     {formData.image.name}
-                    <button onClick={handleImageRemove}>X</button>
+                    <button type="button" onClick={handleImageRemove}>X</button>
                   </div>
                 ) : (
                   <span>Browse</span>
@@ -111,6 +121,7 @@ const SubmissionForm = () => {
                   accept="image/*"
                   onChange={handleChange}
                   style={{ display: 'none' }}
+                  required
                 />
               </label>
             </div>
@@ -155,13 +166,14 @@ const SubmissionForm = () => {
                 value={formData.dateLost}
                 onChange={handleChange}
                 required
-                max={new Date().toISOString().split('T')[0]} // Set max attribute to current date
+                max={new Date().toISOString().split('T')[0]}
                 className={formData.dateLost.trim() === "" ? "touched" : ""}
               />
             </div>
             <div className="form-group">
               <input
                 type="text"
+                ref={locationInputRef}
                 placeholder="Location Lost"
                 name="locationLost"
                 value={formData.locationLost}
