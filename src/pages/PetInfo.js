@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import './PetInfo.css';
-import pets from '../../petDatabase';
-import Layout from '../layout/Layout';
-import ButtonComponent from '../ButtonComponent';
+import pets from "../databases/petDatabase";
+import Layout from "../components/layout/Layout";
+import ButtonComponent from '../components/generic/ButtonComponent';
 
 const PetInfo = () => {
   const { id } = useParams();
