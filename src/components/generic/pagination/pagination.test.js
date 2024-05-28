@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Pagination from './pagination';
 import pets from '../../../databases/petDatabase';
-import { useState } from 'react';
 
 const mockedUsedNavigate = jest.fn();
 const setActivePage = jest.fn();
