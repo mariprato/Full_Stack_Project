@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './filterContainer.css';
-import ButtonComponent from "../ButtonComponent";
+import ButtonComponent from "../generic/ButtonComponent";
 
 const FilterContainer = ({children}) => {
     const [open, setOpen] = useState(false)

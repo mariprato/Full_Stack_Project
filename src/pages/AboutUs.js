@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import UsCard from "./UsCard";
-import colleagueData from "../../aboutusDatabase.js";
+import UsCard from "../components/cards/UsCard.js";
+import colleagueData from "../databases/aboutusDatabase.js";
 import "./AboutUs.css";
-import Layout from "../layout/Layout.js";
+import Layout from "../components/layout/Layout.js"
 
 const AboutUs = () => {
   const [colleagueToDisplay, setColleagueToDisplay] = useState([]);

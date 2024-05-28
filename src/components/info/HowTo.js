@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./HowTo.css";
-import ButtonComponent from "./ButtonComponent";
+import ButtonComponent from "../generic/ButtonComponent";
 
 const HowTo = () => {
   const navigate = useNavigate();
