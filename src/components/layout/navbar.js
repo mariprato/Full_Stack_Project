@@ -76,12 +76,7 @@ const Navbar = () => {
           <a className="overlay-links" onClick={() => navigate("/aboutUs")}>
             About Us
           </a>
-          <ButtonComponent
-            variant="button-post-pink"
-            onClick={() => navigate("/submissionForm")}
-          >
-            Post Now
-          </ButtonComponent>
+          <ButtonComponent variant="button-post-pink" onClick={() => { navigate("/submissionForm"); window.location.reload(); }}>Post Now</ButtonComponent>
         </div>
       </div>
     </nav>

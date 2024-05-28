@@ -27,9 +27,7 @@ const Filter = ({ options, onClick, currentlySelected, filterMethod }) => {
                         <ButtonComponent
                             key={index}
                             variant="button-filter-options"
-                            className={
-                                option === currentlySelected && "current-option"
-                            }
+                            className={option === currentlySelected ? "current-option" : ""}
                             onClick={() => handleOptionClick(option)}
                         >
                             {option}
