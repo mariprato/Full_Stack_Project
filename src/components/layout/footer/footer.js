@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import SubscriptionForm from "../forms/SubscriptionForm";
+import SubscriptionForm from "../../forms/SubscriptionForm";
 
 import "./footer.css";
 
