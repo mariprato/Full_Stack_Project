@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './SubmissionForm.css';
-import ButtonComponent from "../ButtonComponent";
-import Layout from "../layout/Layout.js";
+import ButtonComponent from "../components/generic/ButtonComponent";
+import Layout from "../components/layout/Layout.js";
 
 const SubmissionForm = () => {
   const [formData, setFormData] = useState({

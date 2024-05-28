@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import PetCard from '../PetCard';
-import pets from '../../petDatabase.js';
+import PetCard from '../components/cards/PetCard.jsx';
+import pets from "../databases/petDatabase.js";
 import './LostPets.css';
-import Pagination from '../layout/pagination.js';
-import Filter from '../filters/filter.js';
-import FilterContainer from '../filters/filterContainer.js';
-import Layout from '../layout/Layout.js';
-import ButtonComponent from '../ButtonComponent';
+import Pagination from '../components/generic/pagination.js';
+import Filter from '../components/filters/filter.js';
+import FilterContainer from '../components/filters/filterContainer.js';
+import Layout from '../components/layout/Layout.js';
+import ButtonComponent from '../components/generic/ButtonComponent.js';
 
 const LostPets = () => {
   const location = useLocation();

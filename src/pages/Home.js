@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../layout/header";
-import Layout from "../layout/Layout";
-import HowTo from "../HowTo";
+import Header from "../components/layout/header";
+import Layout from "../components/layout/Layout";
+import HowTo from "../components/info/HowTo";
 
 const Home = () => {
   return (
