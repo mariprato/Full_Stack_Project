@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+.pet-info-layout a {
+    color: blue;
+    text-decoration: underline;
+}
+
 .pet-info-layout h1 {
     color: #F1FAEE;
     text-shadow: 2px 1px 1px #E63946;
