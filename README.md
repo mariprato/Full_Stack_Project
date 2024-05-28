@@ -2,6 +2,27 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Specifics
+
+To ensure the full functionality of our app, please follow these instructions:
+
+### `Obtaining and Adding Your Google API Key`
+
+We are using the Places - Google API. 
+
+1. **Obtain Your Google API Key**: If you haven't already, you'll need to obtain a Google API key. You can generate one by following the instructions provided in the [Google API documentation](https://developers.google.com/maps/documentation/javascript/place-autocomplete).
+
+2. **Insert Your API Key**: Once you have your API key, locate the `public/index.html` file in your project directory.
+
+    - Open `public/index.html` in your preferred text editor.
+    - Find line 26, which should look similar to this:
+      ```html
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places"></script>
+      ```
+    - Replace `YOUR_API_KEY_HERE` with your actual API key.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
