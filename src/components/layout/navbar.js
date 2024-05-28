@@ -54,12 +54,15 @@ const Navbar = () => {
       </div>
       <div className="overlay">
         <div className="logo" onClick={() => navigate("/")}>
-          <img src="/images/MagicEraser_240512_152556 2.png" />
+          <img
+            src="/images/MagicEraser_240512_152556 2.png"
+            alt="Fur-Ever Found Logo of cute cat and dog"
+          />
         </div>
         <div className="overlay-middle">
           <div className="fur-ever-navbar" onClick={() => navigate("/")}>
             {location.pathname !== "/" && (
-              <img src="/images/fureverfound.png" alt="Logo" />
+              <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
             )}
           </div>
         </div>
