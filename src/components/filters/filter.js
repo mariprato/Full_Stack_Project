@@ -33,9 +33,6 @@ const Filter = ({ options, onClick, currentlySelected, filterMethod, clearFilter
                             {option}
                         </ButtonComponent>
                     ))}
-                    <ButtonComponent variant="button-post-blue" onClick={clearFilters}>
-                        Clear Filters
-                    </ButtonComponent>
                 </div>
             )}
         </div>
