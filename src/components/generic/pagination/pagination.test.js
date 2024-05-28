@@ -2,12 +2,12 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Pagination from './pagination';
 import pets from '../../../databases/petDatabase';
 
-const mockedUsedNavigate = jest.fn();
+const mockedUseNavigate = jest.fn();
 const setActivePage = jest.fn();
 
 jest.mock('react-router-dom', () => ({
    ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockedUsedNavigate,
+  useNavigate: () => mockedUseNavigate,
 }));
 
 describe('<Pagination/>', () => {
