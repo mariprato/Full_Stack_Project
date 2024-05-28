@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import PetCard from '../components/cards/PetCard.jsx';
+import PetCard from '../components/cards/PetCard/PetCard.jsx';
 import pets from "../databases/petDatabase.js";
 import './LostPets.css';
 import Pagination from '../components/generic/pagination/pagination.js';
