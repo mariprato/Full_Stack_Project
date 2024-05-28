@@ -1,4 +1,4 @@
-import ButtonComponent from '../ButtonComponent';
+import ButtonComponent from '../button/ButtonComponent';
 import './pagination.css';
 import { useNavigate } from 'react-router-dom';
 

@@ -10,7 +10,7 @@ import {
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { useLocation, useNavigate } from "react-router-dom";
-import ButtonComponent from "../../generic/ButtonComponent";
+import ButtonComponent from "../../generic/button/ButtonComponent";
 
 const Navbar = () => {
   const navigate = useNavigate();

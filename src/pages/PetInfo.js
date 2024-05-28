@@ -3,7 +3,7 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 import './PetInfo.css';
 import pets from "../databases/petDatabase";
 import Layout from "../components/layout/Layout";
-import ButtonComponent from '../components/generic/ButtonComponent';
+import ButtonComponent from '../components/generic/button/ButtonComponent';
 
 const PetInfo = () => {
   const { id } = useParams();

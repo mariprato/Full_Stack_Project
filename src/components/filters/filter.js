@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './filter.css';
-import ButtonComponent from "../generic/ButtonComponent";
+import ButtonComponent from "../generic/button/ButtonComponent";
 
 const Filter = ({ options, onClick, currentlySelected, filterMethod }) => {
     const [open, setOpen] = useState(false);

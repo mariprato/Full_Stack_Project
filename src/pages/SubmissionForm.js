@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './SubmissionForm.css';
-import ButtonComponent from "../components/generic/ButtonComponent";
+import ButtonComponent from "../components/generic/button/ButtonComponent.js";
 import Layout from "../components/layout/Layout.js";
 
 const SubmissionForm = () => {
