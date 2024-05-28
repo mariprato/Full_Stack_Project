@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SubscriptionForm.css";
-import ButtonComponent from "../generic/ButtonComponent";
+import ButtonComponent from "../../generic/ButtonComponent";
 
 function SubscriptionForm() {
     const [email, setEmail] = useState("");
