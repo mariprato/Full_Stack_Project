@@ -18,7 +18,7 @@ const HowTo = () => {
 
   return (
     <div id="how-to-section">
-      <h1>
+      <h1 className="how-titles">
         How{" "}
         <img
           src="/images/fureverfound.png"
@@ -29,7 +29,7 @@ const HowTo = () => {
       </h1>
       <div className="how-container">
         <div className="how-top">
-          <h2>My Pet Is Lost</h2>
+          <h2 className="how-titles">My Pet Is Lost</h2>
           <img
             className="how-top-img"
             src="/images/HowInfoDiagram.png"
@@ -43,7 +43,7 @@ const HowTo = () => {
           </ButtonComponent>
         </div>
         <div className="how-bottom">
-          <h2>I Have Seen a Lost Pet</h2>
+          <h2 className="how-titles">I Have Seen a Lost Pet</h2>
           <img
             className="how-bottom-img"
             src="/images/HowInfoDiagram2.png"
