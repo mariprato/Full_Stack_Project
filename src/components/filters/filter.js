@@ -2,7 +2,7 @@ import { useState } from "react";
 import './filter.css';
 import ButtonComponent from "../generic/ButtonComponent";
 
-const Filter = ({ options, onClick, currentlySelected, filterMethod }) => {
+const Filter = ({ options, onClick, currentlySelected, filterMethod, clearFilters }) => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = () => {
