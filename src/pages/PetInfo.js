@@ -48,10 +48,17 @@ const PetInfo = () => {
               <span className="pet-info-details-keys">Additional Details: </span>
               <span className="pet-info-details-values">{pet.additionalInformation}</span>
             </p>
-            <p className="pet-info-details-keys">Have you seen this pet? Contact us <a className="navbar-email"
+            {pet.found === "Lost" ? 
+              <p className="pet-info-details-keys">Have you seen this pet? Contact us <a className="navbar-email"
               href= {`mailto:enquiry@fur-everfound.com?subject=I think I have found ${pet.name} the ${pet.type}.`}
               rel="noreferrer"
               target="_blank">here.</a></p>
+            :
+              <p className="pet-info-details-keys">Thanks to our Fur-Ever Found community, {pet.name} has now been found and reunited with their owner.</p>
+          
+          
+          }
+
           </div>
         </div>
         <Link to={`/lostPets?page=${state["activePage"]}`} state={state}>
