@@ -37,14 +37,16 @@
 }
 
 .white-bg-blue-text {
-    background-color: white;
-    color: #118ab2; 
-    box-shadow: 1px 1px 0 0 #118ab2;
+    background-color:#118ab2;
+    color: white; 
+    box-shadow: 1px 1px 0 0 white;
+    font-weight: 600;
 }
 
 .white-bg-blue-text:hover {
-    background-color: #118ab2; 
-    color: white;
+    background-color: white; 
+    color:#118ab2;
+    font-weight: 600;
 }
 
 .white-bg-pink-text {

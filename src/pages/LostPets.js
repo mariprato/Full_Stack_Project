@@ -65,6 +65,10 @@ const LostPets = () => {
   };
 
   const filterPets = () => {
+    console.log('Filtering pets...');
+    console.log('Type Filter:', typeFilter);
+    console.log('Location Filter:', locationFilter);
+    console.log('Status Filter:', statusFilter);
     let newFilteredPets = [...pets];
     if (typeFilter !== 'All') {
       newFilteredPets = newFilteredPets.filter((pet) => pet.type === typeFilter);
@@ -132,7 +136,7 @@ const LostPets = () => {
               filterMethod="Status"
             />
             <ButtonComponent
-              variant="button-filter"
+              variant="button-post-blue"
               onClick={clearFilters}
               className="clear-filters-margin"
             >
