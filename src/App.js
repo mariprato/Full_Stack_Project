@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "./App.css";
 import PetInfo from "./pages/PetInfo";
-import SubmissionForm from "./pages/SubmissionForm";
+import PetLostForm from "./pages/PetLostForm";
 import LostPets from "./pages/LostPets";
 import AboutUs from "./pages/AboutUs";
 
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/lostPets" element={<LostPets />} />
           <Route path="/petInfo/:id" element={<PetInfo />} />
-          <Route path="/submissionForm" element={<SubmissionForm />} />
+          <Route path="/submissionForm" element={<PetLostForm />} />
           <Route path="/aboutUs" element={<AboutUs />} />
         </Routes>
       </Router>
