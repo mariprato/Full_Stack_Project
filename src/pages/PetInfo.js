@@ -6,16 +6,12 @@ import Layout from '../components/layout/layout/Layout';
 import ButtonComponent from '../components/generic/button/ButtonComponent';
 
 const PetInfo = () => {
-  const { id } = useParams();
   const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const activePage = searchParams.get('page') || 1;
+  let state = location.state;
+
+  const { id } = useParams();
 
   const pet = pets.find((pet) => pet.id === parseInt(id));
-
-  useEffect(() => {
-    sessionStorage.setItem('lastVisitedPage', activePage);
-  }, [activePage]);
 
   return (
     <Layout>
@@ -58,7 +54,7 @@ const PetInfo = () => {
               target="_blank">here.</a></p>
           </div>
         </div>
-        <Link to={`/lostPets?page=${sessionStorage.getItem('lastVisitedPage') || 1}`}>
+        <Link to={`/lostPets?page=${state["activePage"]}`} state={state}>
           <ButtonComponent variant="button-return-to-pets">Return to All Pets</ButtonComponent>
         </Link>
       </div>

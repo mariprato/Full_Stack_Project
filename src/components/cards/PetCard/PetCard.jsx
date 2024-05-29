@@ -1,10 +1,10 @@
 import './PetCard.css';
 import {Link} from "react-router-dom";
 
-const PetCard = ({pet}) => {   
+const PetCard = ({pet, state}) => {   
     return ( 
         <>
-        <Link to = {`/petInfo/${pet.id}`}>
+        <Link to={`/petInfo/${pet.id}`} state={state}>
         <div className="pet-card">
             <div className = "pet-image-container">
                 {!pet.found &&
