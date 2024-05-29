@@ -14,7 +14,7 @@ function Header() {
     <>
       <div className="title-section">
         <img src="images/fureverfound.png" alt="FureverFound Title Image" />
-        <h2>Bringing lost pets back to their loving arms</h2>
+        <h2>Bringing lost pets back to loving arms</h2>
       </div>
       <div className="image-section">
         <img src="images/Header.jpeg" alt="Header Image" />
