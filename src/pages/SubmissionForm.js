@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import './SubmissionForm.css';
 import ButtonComponent from "../components/generic/button/ButtonComponent.js";
 import Layout from "../components/layout/layout/Layout.js";
+import ButtonComponent from "../components/generic/ButtonComponent";
+import Layout from "../components/layout/Layout.js";
+import Modal from "../components/generic/Modal.js";
 
 const SubmissionForm = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +17,7 @@ const SubmissionForm = () => {
     additionalDetails: "",
   });
 
-  const [confirmationMessage, setConfirmationMessage] = useState("");
+  // const [confirmationMessage, setConfirmationMessage] = useState("");
   const locationInputRef = useRef(null);
 
   useEffect(() => {
@@ -33,6 +36,9 @@ const SubmissionForm = () => {
       });
     }
   }, []);
+  const [showModal, setShowModal] = useState(false);
+
+  
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -74,7 +80,9 @@ const SubmissionForm = () => {
     localStorage.setItem("lostPets", JSON.stringify(savedPosts));
     console.log("Post saved to local storage");
 
-    setConfirmationMessage(`We have received the information from ${formData.petName} and will be letting you know as soon as the post is up on our Lost Pets page.`);
+    setShowModal(true);
+
+    
     
     setFormData({
       image: null,
@@ -93,11 +101,7 @@ const SubmissionForm = () => {
         <div className="submission-form-container">
           <h1>Post Your Lost Pet</h1>
           <p>Please fill in the details below, and a member of the Fur-Ever Found team will review and post your information on our lost pets page to help reunite you with your pet.</p>
-          {confirmationMessage && (
-            <div className="confirmation-message">
-              {confirmationMessage}
-            </div>
-          )}
+        
           
           <form className="submission-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">
@@ -200,6 +204,7 @@ const SubmissionForm = () => {
           <p className="disclaimer">*By pressing submit you accept our <a href="#">terms and conditions</a>.</p>
         </div>
       </Layout>
+      <Modal show={showModal} onClose={() => setShowModal(false)} />
     </>
   );
 };
