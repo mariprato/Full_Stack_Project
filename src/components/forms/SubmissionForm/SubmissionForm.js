@@ -3,7 +3,7 @@ import './SubmissionForm.css';
 import ButtonComponent from "../../generic/button/ButtonComponent.js";
 import Modal from "../../generic/Modal.js";
 import { useDispatch, useSelector } from 'react-redux';
-import { submitForm, storeLocally } from '../../../redux/reducers/submissionFormReducer.js';
+import { submitForm, storeLocally, setImage } from '../../../redux/reducers/submissionFormReducer.js';
 import { verifyImage } from '../../../redux/actions/imageVerificationActions.js';
 
 const SubmissionForm = () => {
@@ -34,29 +34,30 @@ const SubmissionForm = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    dispatch(submitForm({
-      ...formData,
-      [name]: files ? files[0] : value,
-    }));
     if (name === 'image' && files && files[0]) {
-      dispatch(verifyImage(files[0])); // Verify the selected image
+      const file = files[0];
+      const preview = URL.createObjectURL(file);
+      dispatch(setImage({ preview }));
+      dispatch(verifyImage(file));
+    } else {
+      dispatch(submitForm({
+        ...formData,
+        [name]: value,
+      }));
     }
-  };
+  };  
 
   const handleImageRemove = () => {
     document.getElementById('fileInput').value = "";
-    dispatch(submitForm({
-      ...formData,
-      image: null,
-    }));
-    dispatch(verifyImage(null)); // Verify the image removal
+    dispatch(setImage({ file: null, preview: null }));
+    dispatch(verifyImage(null));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const emptyFields = Object.values(formData).some((val) => val === "");
-    if (emptyFields || !formData.image) {
+    if (emptyFields || !formData.imagePreview) {
       alert("Please fill in all fields, including uploading a photo.");
       return;
     }
@@ -80,6 +81,7 @@ const SubmissionForm = () => {
     dispatch(storeLocally(formData));
     dispatch(submitForm({
       image: null,
+      imagePreview: null,
       name: "",
       email: "",
       petName: "",
@@ -102,9 +104,12 @@ const SubmissionForm = () => {
               <p>Please upload a recent picture of your pet for us to share</p>
             </div>
             <label htmlFor="fileInput" className="image-upload">
-              {formData.image ? (
+              {formData.imagePreview ? (
                 <div className="uploaded-image">
-                  {formData.image.name}
+                  <img src={formData.imagePreview} alt={formData.image ? formData.image.name : "Uploaded preview"} />
+                  {formData.image && (
+                    <div className="image-name">{formData.image.name}</div>
+                  )}
                   <button type="button" onClick={handleImageRemove}>X</button>
                 </div>
               ) : (

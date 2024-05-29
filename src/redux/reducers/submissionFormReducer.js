@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   formData: {
     image: null,
+    imagePreview: null,
     name: "",
     email: "",
     petName: "",
@@ -22,9 +23,13 @@ export const submissionFormSlice = createSlice({
     storeLocally: (state, action) => {
       state.formData = action.payload;
     },
+    setImage: (state, action) => {
+        state.formData.image = action.payload.file;
+        state.formData.imagePreview = action.payload.preview;
+      },
   },
 });
 
-export const { submitForm, storeLocally } = submissionFormSlice.actions;
+export const { submitForm, storeLocally, setImage } = submissionFormSlice.actions;
 
 export default submissionFormSlice.reducer;

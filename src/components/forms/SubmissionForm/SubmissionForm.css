@@ -101,6 +101,15 @@ textarea {
   margin-left: 10px;
 }
 
+.uploaded-image img {
+  max-width: 60%;
+  max-height: 60%;
+  display: block;
+  margin: auto;
+  padding-bottom: 5px;
+  position: relative;
+}
+
 textarea {
   resize: none;
 }
