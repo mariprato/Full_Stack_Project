@@ -1,10 +1,10 @@
 import './PetCard.css';
 import {Link} from "react-router-dom";
 
-const PetCard = ({pet}) => {   
+const PetCard = ({pet, state}) => {   
     return ( 
         <>
-        <Link to = {`/petInfo/${pet.id}`}>
+        <Link to={`/petInfo/${pet.id}`} state={state}>
         <div className="pet-card">
             <div className = "pet-image-container">
                 {!pet.found &&
@@ -15,9 +15,9 @@ const PetCard = ({pet}) => {
                         <p className = "overlay-text">Last Seen: {pet.dateLastSeen}</p>
                     </div>}
 
-                {pet.found &&
+                {pet.found === "Found" &&
                 <div className = "found-overlay">
-                    <img className="banner-picture" src="../images/banner.png"/>
+                    <img className="banner-picture" src="../images/banner.png" alt=""/>
                 </div>}
 
                 <div>
