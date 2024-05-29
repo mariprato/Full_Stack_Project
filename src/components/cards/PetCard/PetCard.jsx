@@ -7,7 +7,7 @@ const PetCard = ({pet, state}) => {
         <Link to={`/petInfo/${pet.id}`} state={state}>
         <div className="pet-card">
             <div className = "pet-image-container">
-                {!pet.found &&
+                {pet.found === "Lost" &&
                     <div className="information-overlay">
                         <p className = "overlay-text">Name: {pet.name}</p>
                         <p className = "overlay-text">Species: {pet.type}</p>
