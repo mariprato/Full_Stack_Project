@@ -9,11 +9,11 @@ export const verifyImage = (image) => async (dispatch) => {
         dispatch(setImageVerificationError("The provided image does not meet our specifications. Please select a square image."));
       } else {
         dispatch(setImageVerified(true));
-        dispatch(setImageVerificationError("")); // Clear any previous error message
+        dispatch(setImageVerificationError(""));
       }
     };
     img.src = URL.createObjectURL(image);
   } else {
-    dispatch(setImageVerified(false)); // Image is not provided, mark it as not verified
+    dispatch(setImageVerified(false));
   }
 };
