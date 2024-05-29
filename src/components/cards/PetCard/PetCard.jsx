@@ -15,9 +15,9 @@ const PetCard = ({pet, state}) => {
                         <p className = "overlay-text">Last Seen: {pet.dateLastSeen}</p>
                     </div>}
 
-                {pet.found &&
+                {pet.found === "Found" &&
                 <div className = "found-overlay">
-                    <img className="banner-picture" src="../images/banner.png"/>
+                    <img className="banner-picture" src="../images/banner.png" alt=""/>
                 </div>}
 
                 <div>
