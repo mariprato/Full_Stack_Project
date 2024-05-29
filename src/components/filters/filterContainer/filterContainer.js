@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './filterContainer.css';
-import ButtonComponent from "../generic/ButtonComponent";
+import ButtonComponent from "../../generic/button/ButtonComponent";
 
 const FilterContainer = ({children}) => {
     return ( 
