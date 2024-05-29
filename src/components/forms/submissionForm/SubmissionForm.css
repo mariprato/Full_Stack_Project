@@ -150,3 +150,8 @@ textarea {
   color: #e63946; 
 }
 
+.error-message {
+  padding-top: 5px;
+  color: #e63946;
+  font-size: 14px;
+}
