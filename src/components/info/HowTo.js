@@ -30,7 +30,11 @@ const HowTo = () => {
       <div className="how-container">
         <div className="how-top">
           <h2>My Pet Is Lost</h2>
-          <img className="how-top-img" src="/images/LostPet.jpg" alt="" />
+          <img
+            className="how-top-img"
+            src="/images/HowInfoDiagram.png"
+            alt=""
+          />
           <ButtonComponent
             variant="button-post-pink"
             onClick={goToSubmissionForm}
@@ -40,7 +44,11 @@ const HowTo = () => {
         </div>
         <div className="how-bottom">
           <h2>I Have Seen a Lost Pet</h2>
-          <img className="how-bottom-img" src="/images/LostPet.jpg" alt="" />
+          <img
+            className="how-bottom-img"
+            src="/images/HowInfoDiagram2.png"
+            alt=""
+          />
           <ButtonComponent variant="button-post-pink" onClick={goToLostPets}>
             Lost Pets
           </ButtonComponent>
