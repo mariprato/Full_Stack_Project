@@ -16,6 +16,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Function to check if the current location matches the given path
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <nav>
       <div className="top-nav">
@@ -67,16 +72,33 @@ const Navbar = () => {
           </div>
         </div>
         <div className="overlay-right">
-          <a className="overlay-links" onClick={() => navigate("/")}>
+          <a
+            className={`overlay-links ${isActive("/") ? "active" : ""}`}
+            onClick={() => navigate("/")}
+          >
             Home
           </a>
-          <a className="overlay-links" onClick={() => navigate("/lostPets")}>
+          <a
+            className={`overlay-links ${isActive("/lostPets") ? "active" : ""}`}
+            onClick={() => navigate("/lostPets")}
+          >
             Lost Pets
           </a>
-          <a className="overlay-links" onClick={() => navigate("/aboutUs")}>
+          <a
+            className={`overlay-links ${isActive("/aboutUs") ? "active" : ""}`}
+            onClick={() => navigate("/aboutUs")}
+          >
             About Us
           </a>
-          <ButtonComponent variant="button-post-pink" onClick={() => { navigate("/submissionForm"); window.location.reload(); }}>Post Now</ButtonComponent>
+          <ButtonComponent
+            variant="button-post-pink"
+            onClick={() => {
+              navigate("/submissionForm");
+              window.location.reload();
+            }}
+          >
+            Post Now
+          </ButtonComponent>
         </div>
       </div>
     </nav>

@@ -83,3 +83,8 @@ nav {
   cursor: pointer;
 }
 
+.overlay-links.active {
+  color: #457B9D;
+}
+
+
