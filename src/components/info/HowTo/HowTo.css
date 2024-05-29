@@ -14,11 +14,13 @@
   
 
 
-#how-to-section h1 {
+.how-titles {
     font-size: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #E63946;
+    text-shadow: 1.5px 0 1px #1D3557;
 }
 
 .how-top, .how-bottom {
