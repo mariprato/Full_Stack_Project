@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar.css";
+import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -26,16 +26,24 @@ const Navbar = () => {
       <div className="top-nav">
         <div className="left-section">
           <div className="navbar-symbol">
-            <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
+            <a href="https://www.instagram.com">
+                <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
+            </a>
           </div>
           <div className="navbar-symbol">
-            <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
+            <a href="https://www.facebook.com">
+                <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
+            </a>
           </div>
           <div className="navbar-symbol">
-            <FontAwesomeIcon className="contact-icons" icon={faThreads} />
+            <a href="https://www.threads.net/">
+                <FontAwesomeIcon className="contact-icons" icon={faThreads} />
+            </a>
           </div>
           <div className="navbar-symbol">
-            <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+            <a href="https://www.pinterest.com">
+                <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+            </a>
           </div>
         </div>
         <div className="right-section">

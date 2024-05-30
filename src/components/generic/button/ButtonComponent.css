@@ -25,19 +25,19 @@
 }
 
 .pink-bg-white-text {
-    background-color: #e63946;
-    border-color: #e63946;
-    color: var(--White, #FFF); 
-    box-shadow: 1px 1px 0 0 #1D3557; 
+    background-color: var(--red); 
+    border-color: var(--red); 
+    color: white; 
+    box-shadow: 1px 1px 0 0 var(--darkBlue); 
 }
 
 .pink-bg-white-text:hover {
-    background-color: var(--White, #FFF); 
-    color: #e63946; 
+    background-color: white; 
+    color: var(--red); 
 }
 
 .white-bg-blue-text {
-    background-color:#118ab2;
+    background-color: var(--brightBlue);
     color: white; 
     box-shadow: 1px 1px 0 0 white;
     font-weight: 600;
@@ -45,18 +45,18 @@
 
 .white-bg-blue-text:hover {
     background-color: white; 
-    color:#118ab2;
+    color: var(--brightBlue);
     font-weight: 600;
 }
 
 .white-bg-pink-text {
-    background-color: #ffffff;
-    box-shadow: 1px 1px 0 0 #e63946;
-    color: #e63946;
+    background-color: white;
+    box-shadow: 1px 1px 0 0 var(--red); 
+    color: var(--red); 
 }
 
 .white-bg-pink-text:hover {
-    background-color: #e63946;
+    background-color: var(--red); 
     color: white;
 }
 
@@ -71,7 +71,7 @@
 
 .options-button {
     border-radius: 0px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid white;
     min-width: 120px;
     padding: 5px;
     font-size: 15px;
@@ -83,25 +83,25 @@
 }
 
 .current-option {
-    background-color: #e63946;
-    color: #F1FAEE;
+    background-color: var(--red); 
+    color: white;
 }
 
 .page-button {
     font-size: xx-large;
     font-weight: bold;
-    color: #1D3557;
+    color: var(--darkBlue);
     margin: 1%;
     border-radius: 4px;
 
 }
 
 .page-button-active {
-    background-color: #A8DADC;
+    background-color: var(--lightBlue);
 }
 
 .page-button-non-active {
-    background-color: #F1FAEE;
+    background-color: white;
 }
 
 .newsletter-button {
@@ -113,6 +113,6 @@
 }
 
 .newsletter-button:hover {
-    background-color: #0056b3;
+    background-color: var(--brightBlue);
     color: white;
 }

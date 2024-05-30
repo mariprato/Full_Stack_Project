@@ -1,6 +1,6 @@
 .pet-card-text {
-    color: #E63946;
-    text-shadow: 1.5px 0 1px #1D3557;
+    color: var(--red);
+    text-shadow: 1.5px 0 1px var(--darkBlue);
     font-size: large;
     font-weight: bold;
 }
@@ -22,8 +22,8 @@
 .pet-image {
     width: 100%;
     display: block;
-    border: solid 1px #1D3557;
-    box-shadow: #E63946 5px 5px 5px, inset #E63946  10px 10px 50px;
+    border: solid 1px var(--darkBlue);
+    box-shadow: var(--red) 5px 5px 5px, inset var(--red)  10px 10px 50px;
     border-radius: 2px;
 
 }
@@ -53,7 +53,7 @@
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgb(168, 218, 220, 0.8);
+    background-color: var(--overlayTransparentBlue);
     text-align: left;
     z-index: 2;
   }
@@ -64,7 +64,7 @@
   }
 
   .overlay-text {
-    color: #1D3557;
+    color: var(--darkBlue);
     margin: 3%;
     font-weight: bold;
   }

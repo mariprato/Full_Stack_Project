@@ -6,7 +6,7 @@
 }
 
 .title-section h2 {
-    color: #457B9D; 
+    color: var(--mediumBlue); 
 }
 
 .title-section img {
@@ -36,8 +36,8 @@
     width: 40px;
     height: 40px;
     color: white;
-    background-color: #E63946;
-    box-shadow: 1px 1px 0 0 #118ab2;
+    background-color: var(--red); 
+    box-shadow: 1px 1px 0 0 var(--brightBlue);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
 
 .arrow-down:hover {
     transform: translate(-50%, -5px);
-    color: #E63946;
+    color: var(--red); 
     background-color: white;
 }
 

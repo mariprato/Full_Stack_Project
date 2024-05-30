@@ -1,5 +1,5 @@
 import ButtonComponent from '../button/ButtonComponent';
-import './pagination.css';
+import './Pagination.css';
 import { useNavigate } from 'react-router-dom';
 
 const Pagination = ({pets, activePage, setActivePage}) => {

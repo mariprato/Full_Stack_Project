@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './filterContainer.css';
+import './FilterContainer.css';
 import ButtonComponent from "../../generic/button/ButtonComponent";
 
 const FilterContainer = ({children}) => {
