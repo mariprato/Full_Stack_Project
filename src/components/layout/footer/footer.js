@@ -25,7 +25,7 @@ function FooterCom () {
                         className="footer-brand"
                     />
                     <p className="footer-name">Fur-Ever Found</p>
-                    <div class="social-icons">
+                    <div className="social-icons">
                         <a href="https://www.instagram.com">
                             <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
                         </a>
