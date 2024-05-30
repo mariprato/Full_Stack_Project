@@ -19,7 +19,7 @@ const AboutUs = () => {
           style={{ paddingTop: "50px" }}
         >
           <h1>Our team</h1>
-          <div className="colleagueCardsContainer">
+          <div className="colleague-cards-container">
             <div className="row">
               {colleagueToDisplay.slice(0, 2).map((colleague) => (
                 <UsCard key={colleague.id} colleague={colleague} />

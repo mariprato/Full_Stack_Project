@@ -77,6 +77,7 @@ textarea {
   border-radius: 5px;
   font-size: 16px;
   box-sizing: border-box;
+  font-family: "Roboto-Regular", Helvetica;
 }
 
 .image-upload-header {
@@ -114,27 +115,13 @@ textarea {
   resize: none;
 }
 
-/* .confirmation-message {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #dff0d8;
-  color: #3c763d;
-  border: 1px solid #d6e9c6;
-  border-radius: 4px;
-} */
-
 .disclaimer {
   margin-top: 20px;
   font-size: 12px;
 }
 
 .disclaimer a {
-  color: #007bff;
+  color: var(--disclaimerBlue);
   text-decoration: underline;
 }
 
@@ -163,8 +150,4 @@ textarea {
   padding-top: 5px;
   color: var(--red); 
   font-size: 14px;
-}
-
-.submission-form-container textarea, input {
-  font-family: "Roboto-Regular", Helvetica;
 }

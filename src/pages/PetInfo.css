@@ -9,7 +9,7 @@
 }
 
 .pet-info-layout a {
-    color: blue;
+    color: var(--disclaimerBlue);
     text-decoration: underline;
 }
 
