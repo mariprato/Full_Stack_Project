@@ -4,5 +4,5 @@
 }
 
 .not-home-page {
-    background-color: #1D3557;
+    background-color: var(--darkBlue);
 }

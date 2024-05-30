@@ -5,8 +5,8 @@
   align-items: center;
   width: 80%;
   padding: 2%;
-  background-color: #F1FAEE;
-  border: solid 2px #E63946;
+  background-color: var(--white);
+  border: solid 2px var(--red);
   border-radius: 12px;
   position: relative;
   z-index: 0;
@@ -14,7 +14,7 @@
 
 .colleague-members-layout {
   padding-top: 5%;
-  background-color: #1D3557;
+  background-color: var(--darkBlue);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,8 +33,8 @@
 }
 
 .colleague-card {
-  background-color: #F1FAEE;
-  border: solid 1px #E63946;
+  background-color: var(--white);
+  border: solid 1px var(--red);
   border-radius: 12px;
   padding: 10px;
   width: 250px;
@@ -67,10 +67,10 @@
   font-weight: 400;
   line-height: normal;
   flex-direction: column;
-  color: #1D3557;;
+  color: var(--darkBlue);
 
 }
 
 .colleague-card:hover {
-  box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 4px var(--faintBlack);
 }

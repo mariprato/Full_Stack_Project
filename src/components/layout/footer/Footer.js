@@ -11,7 +11,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import SubscriptionForm from "../../forms/SubscriptionForm/SubscriptionForm";
 
-import "./footer.css";
+import "./Footer.css";
 
 function FooterCom () {
     return (
