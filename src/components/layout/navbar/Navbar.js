@@ -27,22 +27,22 @@ const Navbar = () => {
         <div className="left-section">
           <div className="navbar-symbol">
             <a href="https://www.instagram.com">
-                <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
+              <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
             </a>
           </div>
           <div className="navbar-symbol">
             <a href="https://www.facebook.com">
-                <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
+              <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
             </a>
           </div>
           <div className="navbar-symbol">
             <a href="https://www.threads.net/">
-                <FontAwesomeIcon className="contact-icons" icon={faThreads} />
+              <FontAwesomeIcon className="contact-icons" icon={faThreads} />
             </a>
           </div>
           <div className="navbar-symbol">
             <a href="https://www.pinterest.com">
-                <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+              <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
             </a>
           </div>
         </div>
@@ -66,17 +66,19 @@ const Navbar = () => {
         </div>
       </div>
       <div className="overlay">
-        <div className="logo" onClick={() => navigate("/")}>
-          <img
-            src="/images/MagicEraser_240512_152556 2.png"
-            alt="Fur-Ever Found Logo of cute cat and dog"
-          />
-        </div>
-        <div className="overlay-middle">
-          <div className="fur-ever-navbar" onClick={() => navigate("/")}>
-            {location.pathname !== "/" && (
-              <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
-            )}
+        <div className="overlay-left">
+          <div className="logo" onClick={() => navigate("/")}>
+            <img
+              src="/images/MagicEraser_240512_152556 2.png"
+              alt="Fur-Ever Found Logo of cute cat and dog"
+            />
+          </div>
+          <div className="title-logo">
+            <div className="fur-ever-navbar" onClick={() => navigate("/")}>
+              {location.pathname !== "/" && (
+                <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
+              )}
+            </div>
           </div>
         </div>
         <div className="overlay-right">

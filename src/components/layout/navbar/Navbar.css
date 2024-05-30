@@ -1,5 +1,5 @@
 nav {
-  background-color: var(--darkBlue); 
+  background-color: #1D3557; 
   min-height: 100px;
   position: relative;
 }
@@ -8,7 +8,7 @@ nav {
   padding-right: 8px;
 }
 
-  .top-nav {
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,15 +53,25 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 5px 5px 0 0 var(--red); 
+  box-shadow: 5px 5px 0 0 #E63946;
+}
+
+.overlay-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .overlay-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-weight: bold;
-    color: var(--darkBlue);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: bold;
+  color: #1D3557;
 }
 
 .fur-ever-navbar img {
@@ -74,17 +84,15 @@ nav {
 
 .navbar-contact:hover, 
 .navbar-symbol:hover {
-  color: var(--red); 
+  color: #E63946;
   cursor: pointer;
 }
 
 .overlay-links:hover {
-  color: var(--mediumBlue);
+  color: #457B9D;
   cursor: pointer;
 }
 
 .overlay-links.active {
-  color: var(--mediumBlue);
+  color: #457B9D;
 }
-
-
