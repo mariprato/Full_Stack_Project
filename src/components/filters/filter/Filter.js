@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './filter.css';
+import './Filter.css';
 import ButtonComponent from "../../generic/button/ButtonComponent";
 
 const Filter = ({ options, onClick, currentlySelected, filterMethod, clearFilters }) => {
