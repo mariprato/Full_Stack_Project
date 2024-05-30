@@ -1,12 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import submissionFormReducer from './reducers/submissionFormReducer';
-import imageVerificationReducer from './reducers/imageVerificationSlice';
+import { thunk } from 'redux-thunk'; // Import redux-thunk middleware
+import rootReducer from './reducers/rootReducer'; // Import your root reducer
 
 const store = configureStore({
-  reducer: {
-    submissionForm: submissionFormReducer,
-    imageVerification: imageVerificationReducer,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
 
 export default store;
