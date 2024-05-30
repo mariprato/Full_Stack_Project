@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Filter from './changeFilter';
+import Filter from './Filter';
 import ButtonComponent from '../../generic/button/ButtonComponent';
 
 jest.mock('../../generic/button/ButtonComponent', () => ({ onClick, children, className }) => (
