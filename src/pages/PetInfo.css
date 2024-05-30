@@ -14,7 +14,7 @@
 }
 
 .pet-info-layout h1 {
-    color: var(--white);
+    color: white;
     text-shadow: 2px 1px 1px var(--red);
 }
 

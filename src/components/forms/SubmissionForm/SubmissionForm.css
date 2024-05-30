@@ -12,7 +12,7 @@
 .submission-form-container h1 {
   margin-top: 50px;
   margin-bottom: 20px;
-  color: #fff;
+  color: white;
 }
 
 .submission-form-container p {
@@ -26,10 +26,10 @@
   align-items: center;
   width: 100%;
   max-width: 600px;
-  background: #f5f6f7;
+  background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--faintBlack);
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -44,7 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: white;
   border: 2px solid var(--red);
   border-radius: 5px;
   cursor: pointer;

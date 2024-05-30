@@ -27,30 +27,30 @@
 .pink-bg-white-text {
     background-color: var(--red); 
     border-color: var(--red); 
-    color: #FFF; 
+    color: white; 
     box-shadow: 1px 1px 0 0 var(--darkBlue); 
 }
 
 .pink-bg-white-text:hover {
-    background-color: #FFF; 
+    background-color: white; 
     color: var(--red); 
 }
 
 .white-bg-blue-text {
-    background-color:#118ab2;
-    color: var(--white); 
+    background-color: var(--brightBlue);
+    color: white; 
     box-shadow: 1px 1px 0 0 white;
     font-weight: 600;
 }
 
 .white-bg-blue-text:hover {
     background-color: white; 
-    color:#118ab2;
+    color: var(--brightBlue);
     font-weight: 600;
 }
 
 .white-bg-pink-text {
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 1px 1px 0 0 var(--red); 
     color: var(--red); 
 }
@@ -84,7 +84,7 @@
 
 .current-option {
     background-color: var(--red); 
-    color: var(--white);
+    color: white;
 }
 
 .page-button {
@@ -101,7 +101,7 @@
 }
 
 .page-button-non-active {
-    background-color: var(--white);
+    background-color: white;
 }
 
 .newsletter-button {
@@ -113,6 +113,6 @@
 }
 
 .newsletter-button:hover {
-    background-color: #0056b3;
+    background-color: var(--brightBlue);
     color: white;
 }

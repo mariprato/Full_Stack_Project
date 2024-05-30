@@ -37,7 +37,7 @@
     height: 40px;
     color: white;
     background-color: var(--red); 
-    box-shadow: 1px 1px 0 0 #118ab2;
+    box-shadow: 1px 1px 0 0 var(--brightBlue);
     border-radius: 50%;
     display: flex;
     align-items: center;

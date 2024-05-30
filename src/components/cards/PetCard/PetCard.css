@@ -53,7 +53,7 @@
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgb(168, 218, 220, 0.8);
+    background-color: var(--overlayTransparentBlue);
     text-align: left;
     z-index: 2;
   }
