@@ -165,3 +165,6 @@ textarea {
   font-size: 14px;
 }
 
+.submission-form-container textarea, input {
+  font-family: "Roboto-Regular", Helvetica;
+}
