@@ -66,3 +66,13 @@
         transform: translateY(-3px);
     }
 }
+
+.arrow-down {
+    display: none;
+}
+
+@media only screen and (max-height: 800px) {
+    .arrow-down {
+      display: flex;
+    }
+  }
