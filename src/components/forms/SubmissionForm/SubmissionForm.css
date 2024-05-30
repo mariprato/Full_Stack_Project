@@ -1,7 +1,7 @@
 .submission-form-container {
   padding-top: 50px;
   text-align: center;
-  background: #1D3557;
+  background: var(--darkBlue);
   color: white;
   display: flex;
   justify-content: center;
@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
   background: #fff;
-  border: 2px solid #e63946;
+  border: 2px solid var(--red);
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
@@ -73,7 +73,7 @@ input[type="date"],
 textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #e63946;
+  border: 2px solid var(--red); 
   border-radius: 5px;
   font-size: 16px;
   box-sizing: border-box;
@@ -148,20 +148,20 @@ textarea {
   text-align: center;
   font-size: 14px;
   font-style: normal;
-  background-color: #e63946;
-  border-color: #e63946;
+  background-color: var(--red); 
+  border-color: var(--red); 
   color: white; 
   width: 100px;
 }
 
 .image-upload span:hover {
   background-color: white; 
-  color: #e63946; 
+  color: var(--red); 
 }
 
 .error-message {
   padding-top: 5px;
-  color: #e63946;
+  color: var(--red); 
   font-size: 14px;
 }
 

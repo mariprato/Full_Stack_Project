@@ -3,8 +3,8 @@
     flex-direction: column;
     margin-left: 1%;
     position: absolute;
-    background-color: #F1FAEE;
-    border: solid 2px #e63946;
+    background-color: var(--white);
+    border: solid 2px var(--red);
     border-radius: 4px;
     z-index: 1;
     max-height: 150px;
