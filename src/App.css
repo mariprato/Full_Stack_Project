@@ -12,5 +12,7 @@
   --overlayTransparentBlue: rgb(168, 218, 220, 0.8);
   --blackHalfOpacity: rgba(0, 0, 0, 0.5);
   --faintBlack: rgba(0, 0, 0, 0.1);
+  --darkGrey: #343a40;
+  --lightGrey: #6c757d;
 
 }
