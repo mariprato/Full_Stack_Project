@@ -26,29 +26,29 @@ const Navbar = () => {
       <div className="top-nav">
         <div className="left-section">
           <div className="navbar-symbol">
-            <a href="https://www.instagram.com">
-                <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
+            <a href="https://www.instagram.com" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
             </a>
           </div>
           <div className="navbar-symbol">
-            <a href="https://www.facebook.com">
-                <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
+            <a href="https://www.facebook.com" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
             </a>
           </div>
           <div className="navbar-symbol">
-            <a href="https://www.threads.net/">
-                <FontAwesomeIcon className="contact-icons" icon={faThreads} />
+            <a href="https://www.threads.net/" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faThreads} />
             </a>
           </div>
           <div className="navbar-symbol">
-            <a href="https://www.pinterest.com">
-                <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+            <a href="https://www.pinterest.com" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
             </a>
           </div>
         </div>
         <div className="right-section">
           <div className="navbar-contact">
-            <FontAwesomeIcon className="contact-icons" icon={faPhone} />
+            <FontAwesomeIcon className="right-contact-icons" icon={faPhone} />
             (000) 000 000
           </div>
           <div className="navbar-contact">
@@ -59,24 +59,29 @@ const Navbar = () => {
               target="_blank"
             >
               {" "}
-              <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
+              <FontAwesomeIcon
+                className="right-contact-icons"
+                icon={faEnvelope}
+              />
               enquiry@fur-everfound.com
             </a>
           </div>
         </div>
       </div>
       <div className="overlay">
-        <div className="logo" onClick={() => navigate("/")}>
-          <img
-            src="/images/MagicEraser_240512_152556 2.png"
-            alt="Fur-Ever Found Logo of cute cat and dog"
-          />
-        </div>
-        <div className="overlay-middle">
-          <div className="fur-ever-navbar" onClick={() => navigate("/")}>
-            {location.pathname !== "/" && (
-              <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
-            )}
+        <div className="overlay-left">
+          <div className="logo" onClick={() => navigate("/")}>
+            <img
+              src="/images/MagicEraser_240512_152556 2.png"
+              alt="Fur-Ever Found Logo of cute cat and dog"
+            />
+          </div>
+          <div className="title-logo">
+            <div className="fur-ever-navbar" onClick={() => navigate("/")}>
+              {location.pathname !== "/" && (
+                <img src="/images/fureverfound.png" alt="Fur-Ever Found Logo" />
+              )}
+            </div>
           </div>
         </div>
         <div className="overlay-right">

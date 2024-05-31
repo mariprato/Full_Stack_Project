@@ -1,14 +1,15 @@
 nav {
-  background-color: var(--darkBlue); 
+  background-color: var(--darkBlue);; 
   min-height: 100px;
   position: relative;
 }
 
-.contact-icons {
+.contact-icons, 
+.right-contact-icons {
   padding-right: 8px;
 }
 
-  .top-nav {
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,12 +27,12 @@ nav {
 }
   
 .navbar-symbol {
-  color: white; 
+  color: var(--white); 
   padding: 10px; 
 }
 
 .navbar-contact {
-  color: white; 
+  color: var(--white); 
   padding: 12px; 
   text-decoration: none;
 }
@@ -53,15 +54,26 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 5px 5px 0 0 var(--red); 
+  box-shadow: 5px 5px 0 0 var(--red);
+}
+
+.overlay-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo,
+.fur-ever-navbar {
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .overlay-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-weight: bold;
-    color: var(--darkBlue);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: bold;
+  color: var(--darkBlue);;
 }
 
 .fur-ever-navbar img {
@@ -74,17 +86,15 @@ nav {
 
 .navbar-contact:hover, 
 .navbar-symbol:hover {
-  color: var(--red); 
+  color: var(--red);
   cursor: pointer;
 }
 
 .overlay-links:hover {
-  color: var(--mediumBlue);
+  color: var(--brightBlue);
   cursor: pointer;
 }
 
 .overlay-links.active {
-  color: var(--mediumBlue);
+  color: var(--brightBlue);
 }
-
-
