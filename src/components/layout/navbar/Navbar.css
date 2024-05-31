@@ -47,7 +47,7 @@ nav {
   left: 50%;
   top: 40px;
   transform: translateX(-50%);
-  background-color: var(--white);
+  background-color: white;
   padding: 5px 25px;
   min-width: 70%;
   border-radius: 122px;

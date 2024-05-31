@@ -1,9 +1,4 @@
-:root {
-    --mediumBlue: #1D3557;
-    --red: #E63946;
-    --brightBlue: #457B9D;
-  }
-  
+ 
   .title-section {
     text-align: center; 
     margin-top: 20px;
@@ -37,7 +32,7 @@
     font-size: 1.5em;
     width: 40px;
     height: 40px;
-    color: white;
+    color: var(--white);
     background-color: var(--red);
     box-shadow: 1px 1px 0 0 var(--brightBlue);
     border-radius: 50%;
@@ -50,7 +45,7 @@
   
   .arrow-down:hover {
     color: var(--red); 
-    background-color: white;
+    background-color: var(--white);
   }
   
   @keyframes bounce {
