@@ -5,30 +5,19 @@ import Modal from "../../generic/Modal.js";
 import { useDispatch, useSelector } from 'react-redux';
 import { submitForm, storeLocally, setImage } from '../../../redux/reducers/submissionFormReducer.js';
 import { verifyImage } from '../../../redux/actions/imageVerificationActions.js';
+import { initializeAutocomplete } from '../../../redux/actions/googleMapsActions.js';
 
 const SubmissionForm = () => {
   const formData = useSelector((state) => state.submissionForm.formData);
   const imageVerified = useSelector((state) => state.imageVerification.imageVerified); 
   const errorMessage = useSelector((state) => state.imageVerification.errorMessage);
+  const locationError = useSelector((state) => state.location.error);
   const dispatch = useDispatch();
   const locationInputRef = useRef(null);
 
   useEffect(() => {
-    if (window.google) {
-      const autocomplete = new window.google.maps.places.Autocomplete(locationInputRef.current, {
-        types: ["address"],
-      });
-      autocomplete.addListener("place_changed", () => {
-        const place = autocomplete.getPlace();
-        if (place && place.formatted_address) {
-          dispatch(submitForm({
-            ...formData,
-            locationLost: place.formatted_address,
-          }));
-        }
-      });
-    }
-  }, [dispatch, formData]);
+    dispatch(initializeAutocomplete(locationInputRef));
+  }, [dispatch]);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -45,7 +34,7 @@ const SubmissionForm = () => {
         [name]: value,
       }));
     }
-  };  
+  };
 
   const handleImageRemove = () => {
     document.getElementById('fileInput').value = "";
@@ -65,7 +54,7 @@ const SubmissionForm = () => {
     if (!imageVerified) {
       alert("Please upload a valid image.");
       return;
-    }  
+    }
 
     const savedPosts = JSON.parse(localStorage.getItem("lostPets")) || [];
     console.log("Retrieved saved posts from local storage:", savedPosts);
@@ -188,6 +177,7 @@ const SubmissionForm = () => {
               required
               className={formData.locationLost.trim() === "" ? "touched" : ""}
             />
+            {locationError && <div className="error-message">{locationError}</div>}
           </div>
           <div className="form-group">
             <textarea
