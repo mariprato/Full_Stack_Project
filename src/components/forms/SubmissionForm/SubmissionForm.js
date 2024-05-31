@@ -90,7 +90,7 @@ const SubmissionForm = () => {
           <div className="form-group">
             <div className="image-upload-header">
               <h3>Upload your image</h3>
-              <p>Please upload a recent picture of your pet for us to share</p>
+              <p>Please upload a recent picture in a square format of your pet for us to share</p>
             </div>
             <label htmlFor="fileInput" className="image-upload">
               {formData.imagePreview ? (
