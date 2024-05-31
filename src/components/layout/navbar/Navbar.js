@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
         <div className="right-section">
           <div className="navbar-contact">
-            <FontAwesomeIcon className="contact-icons" icon={faPhone} />
+            <FontAwesomeIcon className="right-contact-icons" icon={faPhone} />
             (000) 000 000
           </div>
           <div className="navbar-contact">
@@ -59,7 +59,10 @@ const Navbar = () => {
               target="_blank"
             >
               {" "}
-              <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
+              <FontAwesomeIcon
+                className="right-contact-icons"
+                icon={faEnvelope}
+              />
               enquiry@fur-everfound.com
             </a>
           </div>
