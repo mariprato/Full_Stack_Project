@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import './SubmissionForm.css';
 import ButtonComponent from "../../generic/button/ButtonComponent.js";
-import Modal from "../../generic/Modal.js";
+import Modal from "../../cards/Modal/Modal.js";
 import { useDispatch, useSelector } from 'react-redux';
 import { submitForm, storeLocally, setImage } from '../../../redux/reducers/submissionFormReducer.js';
 import { verifyImage } from '../../../redux/actions/imageVerificationActions.js';
