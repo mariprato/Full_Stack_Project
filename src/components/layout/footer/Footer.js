@@ -13,72 +13,72 @@ import SubscriptionForm from "../../forms/SubscriptionForm/SubscriptionForm";
 
 import "./Footer.css";
 
-function FooterCom () {
-    return (
-        <Footer container className="footer-container">
-            <div className="footer-content">
-                <div className="section-one">
-                    <Footer.Brand
-                        href="/"
-                        src="/images/Footer.png"
-                        alt="Fur-Ever Logo"
-                        className="footer-brand"
-                    />
-                    <p className="footer-name">Fur-Ever Found</p>
-                    <div className="social-icons">
-                        <a href="https://www.instagram.com">
-                            <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
-                        </a>
-                        <a href="https://www.facebook.com">
-                            <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
-                        </a>
-                        <a href="https://www.threads.net/">
-                            <FontAwesomeIcon className="contact-icons" icon={faThreads} />
-                        </a>
-                        <a href="https://www.pinterest.com">
-                            <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
-                        </a>
-                    </div>
-                </div>
-                <div className="section-two">
-                    <Footer.LinkGroup className="footer-link-group">
-                        <Footer.Link href="/aboutUs">About Us</Footer.Link>
-                        <Footer.Link href="#">Privacy Policy</Footer.Link>
-                        <Footer.Link href="#">Terms and Conditions</Footer.Link>
-                    </Footer.LinkGroup>
-                </div>
-                <div className="section-three">
-                    <div className="footer-title">Contact Us</div>
-                    <div className="footer-contact">
-                        <FontAwesomeIcon className="contact-icons" icon={faPhone} />
-                        (000) 000 000
-                    </div>
-                    <div className="footer-contact">
-                        <a
-                            className="navbar-email"
-                            href="mailto:enquiry@Fur-EverFound.com"
-                            rel="noreferrer"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
-                            enquiry@fur-everfound.com
-                        </a>
-                    </div>
-                </div>
-                <div className="section-four">
-                    <div className="footer-title">Newsletter</div>
-                    <div className="subscribe">
-                        <p>Subscribe for updates</p>
-                        <SubscriptionForm />
-                    </div>
-                </div>
-            </div>
-            <Footer.Divider />
-            <div className="footer-copyright">
-                <span>© 2024 Fur-Ever Found. All Rights Reserved.</span>
-            </div>
-        </Footer>
-    );
+function FooterCom() {
+  return (
+    <Footer container className="footer-container">
+      <div className="footer-content">
+        <div className="section-one">
+          <Footer.Brand
+            href="/"
+            src="/images/Footer.png"
+            alt="Fur-Ever Logo"
+            className="footer-brand"
+          />
+          <p className="footer-name">Fur-Ever Found</p>
+          <div className="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
+            </a>
+            <a href="https://www.threads.net/" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faThreads} />
+            </a>
+            <a href="https://www.pinterest.com" target="_blank">
+              <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
+            </a>
+          </div>
+        </div>
+        <div className="section-two">
+          <Footer.LinkGroup className="footer-link-group">
+            <Footer.Link href="/aboutUs">About Us</Footer.Link>
+            <Footer.Link href="#">Privacy Policy</Footer.Link>
+            <Footer.Link href="#">Terms and Conditions</Footer.Link>
+          </Footer.LinkGroup>
+        </div>
+        <div className="section-three">
+          <div className="footer-title">Contact Us</div>
+          <div className="footer-contact">
+            <FontAwesomeIcon className="contact-icons" icon={faPhone} />
+            (000) 000 000
+          </div>
+          <div className="footer-contact">
+            <a
+              className="navbar-email"
+              href="mailto:enquiry@Fur-EverFound.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon className="contact-icons" icon={faEnvelope} />
+              enquiry@fur-everfound.com
+            </a>
+          </div>
+        </div>
+        <div className="section-four">
+          <div className="footer-title">Newsletter</div>
+          <div className="subscribe">
+            <p>Subscribe for updates</p>
+            <SubscriptionForm />
+          </div>
+        </div>
+      </div>
+      <Footer.Divider />
+      <div className="footer-copyright">
+        <span>© 2024 Fur-Ever Found. All Rights Reserved.</span>
+      </div>
+    </Footer>
+  );
 }
 
 export default FooterCom;

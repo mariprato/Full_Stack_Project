@@ -26,22 +26,22 @@ const Navbar = () => {
       <div className="top-nav">
         <div className="left-section">
           <div className="navbar-symbol">
-            <a href="https://www.instagram.com">
+            <a href="https://www.instagram.com" target="_blank">
               <FontAwesomeIcon className="contact-icons" icon={faInstagram} />
             </a>
           </div>
           <div className="navbar-symbol">
-            <a href="https://www.facebook.com">
+            <a href="https://www.facebook.com" target="_blank">
               <FontAwesomeIcon className="contact-icons" icon={faFacebookF} />
             </a>
           </div>
           <div className="navbar-symbol">
-            <a href="https://www.threads.net/">
+            <a href="https://www.threads.net/" target="_blank">
               <FontAwesomeIcon className="contact-icons" icon={faThreads} />
             </a>
           </div>
           <div className="navbar-symbol">
-            <a href="https://www.pinterest.com">
+            <a href="https://www.pinterest.com" target="_blank">
               <FontAwesomeIcon className="contact-icons" icon={faPinterestP} />
             </a>
           </div>
