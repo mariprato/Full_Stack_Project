@@ -1,4 +1,6 @@
+import loadGoogleMapsAPI from '../../utils/loadGoogleMapsAPI';
 import GoogleMapsService from '../../services/googleMapsService';
+import {GOOGLE_MAPS_API_KEY} from '../../config/config';
 
 const googleMapsService = new GoogleMapsService();
 
@@ -16,8 +18,10 @@ export const setLocationError = (error) => ({
 });
 
 export const initializeAutocomplete = (inputRef) => {
-  return (dispatch) => {
+  return async (dispatch) => {
     try {
+      await loadGoogleMapsAPI(GOOGLE_MAPS_API_KEY);
+      googleMapsService.initAutocompleteService();
       googleMapsService.initializeAutocomplete(inputRef, (address, error) => {
         if (error) {
           dispatch(setLocationError(error.message));
