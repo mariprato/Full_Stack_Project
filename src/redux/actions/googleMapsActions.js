@@ -1,6 +1,6 @@
 import loadGoogleMapsAPI from '../../utils/loadGoogleMapsAPI';
 import GoogleMapsService from '../../services/googleMapsService';
-import {GOOGLE_MAPS_API_KEY} from '../../config/config';
+import { GOOGLE_MAPS_API_KEY } from '../../config/config';
 
 const googleMapsService = new GoogleMapsService();
 
