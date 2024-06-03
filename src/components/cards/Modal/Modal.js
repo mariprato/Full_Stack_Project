@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.css";
+import ButtonComponent from "../../generic/button/ButtonComponent";
 
 const Modal = ({ show, onClose }) => {
   if (show) {
@@ -18,9 +19,9 @@ const Modal = ({ show, onClose }) => {
             <p>
               Congratulations! You are one step closer to being reunited with your pet. You will shortly receive a confirmation email.
             </p>
-            <button className="close-modal" onClick={onClose}>
+            <ButtonComponent variant="button-close-modal" onClick={onClose}>
               CLOSE
-            </button>
+            </ButtonComponent>
           </div>
         </div>
       )}
