@@ -27,15 +27,6 @@
     position: relative;
   }
   
-  .close-modal {
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
   .active-modal {
     overflow: hidden;
   }

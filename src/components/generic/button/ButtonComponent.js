@@ -4,6 +4,7 @@ import "./ButtonComponent.css";
 const ButtonComponent = ({children, variant, onClick, className, type}) => {
 
     const classes = classNames(className, {
+        'close-modal-button': variant === 'button-close-modal',
         'button-standard medium pink-bg-white-text': variant === 'button-post-pink',
         'button-standard medium white-bg-blue-text': variant === 'button-post-blue',
         "button-standard large pink-bg-white-text" : variant === 'button-return-to-pets',

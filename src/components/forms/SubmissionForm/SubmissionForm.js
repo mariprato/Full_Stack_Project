@@ -111,7 +111,7 @@ const SubmissionForm = () => {
                   {formData.image && (
                     <div className="image-name">{formData.image.name}</div>
                   )}
-                  <button type="button" onClick={handleImageRemove}>X</button>
+                  <ButtonComponent type="button" onClick={handleImageRemove}>X</ButtonComponent>
                 </div>
               ) : (
                 <span>Browse</span>
