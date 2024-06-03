@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// This code creates a Redux slice for managing submission form data, with actions to submit the form, store data locally, and set image data.
+
+
 const initialState = {
   formData: {
     image: null,

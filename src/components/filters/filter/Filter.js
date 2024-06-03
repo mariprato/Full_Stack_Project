@@ -2,6 +2,9 @@ import { useState } from "react";
 import './Filter.css';
 import ButtonComponent from "../../generic/button/ButtonComponent";
 
+// This code defines a React component for a filter with a dropdown menu, allowing users to select an option from a list and clear the filters.
+
+
 const Filter = ({ options, onClick, currentlySelected, filterMethod, clearFilters }) => {
     const [open, setOpen] = useState(false);
 

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./SubscriptionForm.css";
 import ButtonComponent from "../../generic/button/ButtonComponent";
 
+// This code defines a React component for a subscription form that saves the user's email to local storage and displays a confirmation message upon submission.
+
+
 function SubscriptionForm() {
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);

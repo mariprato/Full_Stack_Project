@@ -1,5 +1,8 @@
 import { setImageVerified, setImageVerificationError } from '../reducers/imageVerificationSlice';
 
+// This code verifies if an uploaded image is square and dispatches actions to update the verification state or handle errors.
+
+
 export const verifyImage = (image) => async (dispatch) => {
   try {
     if (image) {

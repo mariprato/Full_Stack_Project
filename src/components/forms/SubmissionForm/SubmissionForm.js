@@ -7,6 +7,8 @@ import { submitForm, storeLocally, setImage } from '../../../redux/reducers/subm
 import { verifyImage } from '../../../redux/actions/imageVerificationActions.js';
 import { initializeAutocomplete } from '../../../redux/actions/googleMapsActions.js';
 
+// This code defines a React component for a form that allows users to submit details about a lost pet, including uploading an image, which is then verified and stored locally upon submission.
+
 const SubmissionForm = () => {
   const formData = useSelector((state) => state.submissionForm.formData);
   const imageVerified = useSelector((state) => state.imageVerification.imageVerified); 

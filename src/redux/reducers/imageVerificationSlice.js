@@ -1,5 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// This code creates a Redux slice for managing image verification state, with actions to set the verification status and error messages.
+
+
 const initialState = {
   imageVerified: false,
   errorMessage: "",
