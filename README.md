@@ -2,30 +2,40 @@
 
 ## About
 
-This is a web application designed to help people effectively advertise their lost pets and enable individuals to easily find information about missing pets in their area.
+Welcome to Fur-ever Found, a web application dedicated to helping you advertise your lost pets and find missing pets in your area. Our platform is designed with user-friendly features to make your search as effective and seamless as possible. Join our community to ensure every lost pet finds its way back home.
 
-## Tech Used
-
-This web application was built using React.
+## Installation
 
 ### Tools
 
 - [React](https://react.dev/)
+- [Google Places API](https://developers.google.com/maps/documentation/javascript/place-autocomplete)
 - [FontAwesome](https://fontawesome.com/)
 - [Coolors](https://coolors.co/)
 
+### `Obtaining and Adding Your Google API Key`
+
+1. **Obtain Your Google API Key**: If you haven't already, you'll need to obtain a Google API key. You can generate one by following the instructions provided in the [Google API documentation](https://developers.google.com/maps/documentation/javascript/place-autocomplete).
+
+2. **Insert Your API Key**: Once you have your API key, locate the `config.js` file in your project directory.
+
+   - Open `src/config/config.js` in your preferred text editor.
+   - Replace `'YOUR_API_KEY'` with your actual API key.
+
 ### Screenshots of Web Application
 
-### Future Development
+## Future Development
 
-- Search feature
-- Map
-- Found process - do we move as a success story, can anyone click found.
-- Login to a user account e.g. so that only the user can mark their pet as ‘found’ and so that people can contact users via their account rather than the Fur-ever Found team.
-- Make the page responsive for mobile too.
-- Login/Register to remove the need for the Fur-Ever Found team to act as a liaison.
-
-## Credits
+- **Search Feature**: Implement a robust search functionality to help users find pets quickly and efficiently.
+- **Interactive Map**: Integrate an interactive map to visualize the locations of lost and found pets.
+- **Found Process Enhancement**:
+  - Evaluate the process for marking pets as found to determine if it should be showcased as a success story.
+  - Decide whether users can mark any pet as found or only their own.
+- **User Account System**: Introduce user accounts to:
+  - Ensure only the pet owner can mark their pet as found.
+  - Allow direct communication between users through their accounts, eliminating the need for mediation by the Fur-ever Found team.
+- **Mobile Responsiveness**: Optimize the website for mobile devices to ensure a seamless user experience across all screen sizes.
+- **User Authentication**: Implement login and registration features to streamline communication and reduce the necessity for the Fur-Ever Found team to serve as intermediaries.
 
 ## Contributors
 
