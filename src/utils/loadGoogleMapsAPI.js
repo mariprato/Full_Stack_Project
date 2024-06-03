@@ -1,3 +1,5 @@
+// This function asynchronously loads the Google Maps API, resolving a promise when the API is successfully loaded or rejecting if there is an error.
+
 let isAPILoaded = false;
 let isAPILoading = false;
 

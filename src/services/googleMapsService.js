@@ -1,3 +1,7 @@
+
+// This class provides methods for initializing and interacting with Google Maps Autocomplete service, ensuring proper initialization and error handling.
+
+
 class GoogleMapsService {
   constructor() {
     this.isAutocompleteInitialized = false;

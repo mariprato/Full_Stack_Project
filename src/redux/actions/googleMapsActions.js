@@ -2,6 +2,8 @@ import loadGoogleMapsAPI from '../../utils/loadGoogleMapsAPI';
 import GoogleMapsService from '../../services/googleMapsService';
 import { GOOGLE_MAPS_API_KEY } from '../../config/config';
 
+// This code initializes Google Maps Autocomplete in a React component, dispatching actions to set the location or handle errors.
+
 const googleMapsService = new GoogleMapsService();
 
 export const SET_LOCATION = 'SET_LOCATION';
