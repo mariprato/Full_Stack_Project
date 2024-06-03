@@ -13,6 +13,7 @@ const SubmissionForm = () => {
   const errorMessage = useSelector((state) => state.imageVerification.errorMessage);
   const locationError = useSelector((state) => state.location.error);
   const dispatch = useDispatch();
+  const location = useSelector((state) => state.location.location);
   const locationInputRef = useRef(null);
 
   useEffect(() => {
@@ -79,6 +80,15 @@ const SubmissionForm = () => {
       additionalDetails: "",
     }));
   };
+
+  useEffect(() => {
+    if (location) {
+      dispatch(submitForm({
+        ...formData,
+        locationLost: location,
+      }));
+    }
+  }, [location, dispatch]);
 
   return (
     <>
@@ -194,7 +204,7 @@ const SubmissionForm = () => {
             <ButtonComponent type="submit" variant="button-form-submit">Submit</ButtonComponent>
           </div>
         </form>
-        <p className="disclaimer">*By pressing submit you accept our <a href="#">terms and conditions</a>.</p>
+        <p className="disclaimer">*By pressing submit you accept our <a href="#" onClick={(e) => e.preventDefault()}>terms and conditions</a>.</p>
       </div>
       <Modal show={showModal} onClose={() => setShowModal(false)} />
     </>

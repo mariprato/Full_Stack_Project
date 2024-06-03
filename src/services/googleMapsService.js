@@ -1,21 +1,24 @@
-class googleMapsService {
+class GoogleMapsService {
   constructor() {
-    this.initializeService();
+    this.isAutocompleteInitialized = false;
   }
 
-  initializeService() {
-    if (window?.google?.maps?.places) {
-      this.autocompleteService =
-        new window.google.maps.places.AutocompleteService();
-    } else {
-      window.initMap = () => {
-        this.autocompleteService =
-          new window.google.maps.places.AutocompleteService();
-      };
+  initAutocompleteService() {
+    if (this.isAutocompleteInitialized) return;
+    if (!window.google || !window.google.maps || !window.google.maps.places) {
+      console.error('Google Maps API is not loaded properly.');
+      return;
     }
+    this.autocompleteService = new window.google.maps.places.AutocompleteService();
+    this.isAutocompleteInitialized = true;
   }
 
   initializeAutocomplete(inputRef, onPlaceChanged) {
+    if (!this.isAutocompleteInitialized) {
+      console.error('Autocomplete service is not initialized yet.');
+      return;
+    }
+
     const autocomplete = new window.google.maps.places.Autocomplete(
       inputRef.current,
       {
@@ -36,4 +39,4 @@ class googleMapsService {
   }
 }
 
-export default googleMapsService;
+export default GoogleMapsService;
