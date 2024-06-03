@@ -17,14 +17,10 @@ Welcome to Fur-ever Found, a web application dedicated to helping you advertise 
 
 1. **Obtain Your Google API Key**: If you haven't already, you'll need to obtain a Google API key. You can generate one by following the instructions provided in the [Google API documentation](https://developers.google.com/maps/documentation/javascript/place-autocomplete).
 
-2. **Insert Your API Key**: Once you have your API key, locate the `public/index.html` file in your project directory.
+2. **Insert Your API Key**: Once you have your API key, locate the `config.js` file in your project directory.
 
-   - Open `public/index.html` in your preferred text editor.
-   - Find line 26, which should look similar to this:
-     ```html
-     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places"></script>
-     ```
-   - Replace `YOUR_API_KEY_HERE` with your actual API key.
+   - Open `src/config/config.js` in your preferred text editor.
+   - Replace `'YOUR_API_KEY'` with your actual API key.
 
 ### Screenshots of Web Application
 
