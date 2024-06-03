@@ -2,20 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./HowTo.css";
 import ButtonComponent from "../../generic/button/ButtonComponent";
+import { goToTopOfPage } from "../../../utils/goToTopOfPage";
 
 const HowTo = () => {
   const navigate = useNavigate();
-
-  const goToSubmissionForm = () => {
-    navigate("/submissionForm");
-    window.scrollTo(0, 0); // Scrolls to the top of the page
-  };
-
-  const goToLostPets = () => {
-    navigate("/lostPets");
-    window.scrollTo(0, 0);
-  };
-
+  
   return (
     <div id="how-to-section">
       <h1 className="how-titles">
@@ -37,7 +28,7 @@ const HowTo = () => {
           />
           <ButtonComponent
             variant="button-post-pink"
-            onClick={goToSubmissionForm}
+            onClick={() => goToTopOfPage(navigate, "/submissionForm")}
           >
             Post Now
           </ButtonComponent>
@@ -49,7 +40,7 @@ const HowTo = () => {
             src="/images/HowInfoDiagram2.png"
             alt="Sequential cartoon-style depiction of the process for reporting a lost pet sighting. Includes a person spotting a lost pet, visiting the website to click the 'Contact Us' button, and the team quickly notifying the pet's owner."
           />
-          <ButtonComponent variant="button-post-pink" onClick={goToLostPets}>
+          <ButtonComponent variant="button-post-pink" onClick={() => goToTopOfPage(navigate, "/lostPets")}>
             Lost Pets
           </ButtonComponent>
         </div>
