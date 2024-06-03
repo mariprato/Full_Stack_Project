@@ -1,3 +1,4 @@
+// Called when any filter is selected. Applies current type, location and found filters to the pets.
 export const filterPets = (pets, setFilteredPets, typeFilter, locationFilter, statusFilter) => {
     let newFilteredPets = [...pets];
     const filters = [typeFilter, locationFilter, statusFilter];
