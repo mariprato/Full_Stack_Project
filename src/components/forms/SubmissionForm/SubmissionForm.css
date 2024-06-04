@@ -1,0 +1,153 @@
+.submission-form-container {
+  padding-top: 50px;
+  text-align: center;
+  background: var(--darkBlue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submission-form-container h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.submission-form-container p {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.submission-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--faintBlack);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.image-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 2px solid var(--red);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+  font-style: italic;
+}
+
+.image-upload label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-upload input {
+  display: none;
+  color: black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--red); 
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Roboto-Regular", Helvetica;
+}
+
+.image-upload-header {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.image-upload-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: var(--darkGrey);
+}
+
+.image-upload-header p {
+  margin: 2px;
+  font-size: 12px;
+  color: var(--lightGrey);
+}
+
+.uploaded-image button {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.uploaded-image img {
+  max-width: 60%;
+  max-height: 60%;
+  display: block;
+  margin: auto;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+textarea {
+  resize: none;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.disclaimer a {
+  color: var(--disclaimerBlue);
+  text-decoration: underline;
+}
+
+.image-upload span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  background-color: var(--red); 
+  border-color: var(--red); 
+  color: white; 
+  width: 100px;
+}
+
+.image-upload span:hover {
+  background-color: white; 
+  color: var(--red); 
+}
+
+.error-message {
+  padding-top: 5px;
+  color: var(--red); 
+  font-size: 14px;
+}

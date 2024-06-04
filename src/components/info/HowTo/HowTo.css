@@ -1,0 +1,44 @@
+
+.how-title {
+  width: 260px; 
+  height: auto;
+  vertical-align: middle;
+  margin: 0 0.2em; 
+}
+
+.how-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  
+
+
+.how-titles {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red); 
+    text-shadow: 1.5px 0 1px var(--darkBlue);
+}
+
+.how-top, .how-bottom {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.how-top img, .how-bottom-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.how-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-top button {
+    margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+.options-buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    position: absolute;
+    background-color: white;
+    border: solid 2px var(--red);
+    border-radius: 4px;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px var(--faintBlack);
+}

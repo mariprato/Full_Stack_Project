@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# FUR-EVER FOUND
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+Welcome to Fur-ever Found, a web application dedicated to helping you advertise your lost pets and find missing pets in your area. Our platform is designed with user-friendly features to make your search as effective and seamless as possible. Join our community to ensure every lost pet finds its way back home.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+### Tools
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [React](https://react.dev/)
+- [Google Places API](https://developers.google.com/maps/documentation/javascript/place-autocomplete)
+- [FontAwesome](https://fontawesome.com/)
+- [Coolors](https://coolors.co/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Obtaining and Adding Your Google API Key`
 
-### `npm test`
+1. **Obtain Your Google API Key**: If you haven't already, you'll need to obtain a Google API key. You can generate one by following the instructions provided in the [Google API documentation](https://developers.google.com/maps/documentation/javascript/place-autocomplete).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Insert Your API Key**: Once you have your API key, locate the `config.js` file in your project directory.
 
-### `npm run build`
+   - Open `src/config/config.js` in your preferred text editor.
+   - Replace `'YOUR_API_KEY'` with your actual API key.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshots of Web Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Search Feature**: Implement a robust search functionality to help users find pets quickly and efficiently.
+- **Interactive Map**: Integrate an interactive map to visualize the locations of lost and found pets.
+- **Found Process Enhancement**:
+  - Evaluate the process for marking pets as found to determine if it should be showcased as a success story.
+  - Decide whether users can mark any pet as found or only their own.
+- **User Account System**: Introduce user accounts to:
+  - Ensure only the pet owner can mark their pet as found.
+  - Allow direct communication between users through their accounts, eliminating the need for mediation by the Fur-ever Found team.
+- **Mobile Responsiveness**: Optimize the website for mobile devices to ensure a seamless user experience across all screen sizes.
+- **User Authentication**: Implement login and registration features to streamline communication and reduce the necessity for the Fur-Ever Found team to serve as intermediaries.
 
-### `npm run eject`
+## Contributors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Abby](https://github.com/abbyunderwood)
+- [Amiker](https://github.com/AmikerB)
+- [Emma](https://github.com/EmmaHolden)
+- [Mariane](https://github.com/mariprato)
+- [Laura](https://github.com/Laurita314)

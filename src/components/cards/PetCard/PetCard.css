@@ -1,0 +1,70 @@
+.pet-card-text {
+    color: var(--red);
+    text-shadow: 1.5px 0 1px var(--darkBlue);
+    font-size: large;
+    font-weight: bold;
+}
+
+.pet-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-image-container {
+    display: flex;
+    position: relative;
+    width: 80%;
+  }
+
+
+.pet-image {
+    width: 100%;
+    display: block;
+    border: solid 1px var(--darkBlue);
+    box-shadow: var(--red) 5px 5px 5px, inset var(--red)  10px 10px 50px;
+    border-radius: 2px;
+
+}
+
+.found-overlay {
+  z-index: 2;
+}
+
+.banner-picture {
+  width: 100%;
+  position: absolute;
+  top: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.information-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--overlayTransparentBlue);
+    text-align: left;
+    z-index: 2;
+  }
+
+  .pet-card:hover .information-overlay {
+    opacity: 1;
+    cursor: pointer
+  }
+
+  .overlay-text {
+    color: var(--darkBlue);
+    margin: 3%;
+    font-weight: bold;
+  }

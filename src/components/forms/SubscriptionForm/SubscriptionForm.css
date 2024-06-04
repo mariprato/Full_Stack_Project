@@ -1,0 +1,22 @@
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.subscription-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscription-form input {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}

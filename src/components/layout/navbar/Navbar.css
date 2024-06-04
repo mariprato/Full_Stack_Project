@@ -1,0 +1,100 @@
+nav {
+  background-color: var(--darkBlue);; 
+  min-height: 100px;
+  position: relative;
+}
+
+.contact-icons, 
+.right-contact-icons {
+  padding-right: 8px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; 
+  max-width: 70%;
+  margin: auto;
+}
+  
+.left-section {
+  display: flex;
+}
+  
+.right-section {
+  display: flex;
+}
+  
+.navbar-symbol {
+  color: var(--white); 
+  padding: 10px; 
+}
+
+.navbar-contact {
+  color: var(--white); 
+  padding: 12px; 
+  text-decoration: none;
+}
+
+.navbar-email {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 5px 25px;
+  min-width: 70%;
+  border-radius: 122px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 0 0 var(--red);
+}
+
+.overlay-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo,
+.fur-ever-navbar {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.overlay-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: bold;
+  color: var(--darkBlue);;
+}
+
+.fur-ever-navbar img {
+  width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blackHalfOpacity);
+}
+
+.navbar-contact:hover, 
+.navbar-symbol:hover {
+  color: var(--red);
+  cursor: pointer;
+}
+
+.overlay-links:hover {
+  color: var(--brightBlue);
+  cursor: pointer;
+}
+
+.overlay-links.active {
+  color: var(--brightBlue);
+}

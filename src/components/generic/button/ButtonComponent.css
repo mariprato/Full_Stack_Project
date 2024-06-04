@@ -1,0 +1,127 @@
+.button-standard {
+    border-radius: 78px;
+    border: none;
+    height: 35px;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.small {
+    width: 50px;
+}
+
+.medium {
+    width: 100px;
+}
+
+.large {
+    width: 150px;
+}
+
+.pink-bg-white-text {
+    background-color: var(--red); 
+    border-color: var(--red); 
+    color: white; 
+    box-shadow: 1px 1px 0 0 var(--darkBlue); 
+}
+
+.pink-bg-white-text:hover {
+    background-color: white; 
+    color: var(--red); 
+}
+
+.white-bg-blue-text {
+    background-color: var(--brightBlue);
+    color: white; 
+    box-shadow: 1px 1px 0 0 white;
+    font-weight: 600;
+}
+
+.white-bg-blue-text:hover {
+    background-color: white; 
+    color: var(--brightBlue);
+    font-weight: 600;
+}
+
+.white-bg-pink-text {
+    background-color: white;
+    box-shadow: 1px 1px 0 0 var(--red); 
+    color: var(--red); 
+}
+
+.white-bg-pink-text:hover {
+    background-color: var(--red); 
+    color: white;
+}
+
+.filter-button {
+    box-shadow: 1px 1px 0 0 white;
+    min-width: 150px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+.options-button {
+    border-radius: 0px;
+    border-bottom: 1px solid white;
+    min-width: 120px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.options-button:last-child {
+    border-bottom: none;
+}
+
+.current-option {
+    background-color: var(--red); 
+    color: white;
+}
+
+.page-button {
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--darkBlue);
+    margin: 1%;
+    border-radius: 4px;
+
+}
+
+.close-modal-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.page-button-active {
+    background-color: var(--lightBlue);
+}
+
+.page-button-non-active {
+    background-color: white;
+}
+
+.newsletter-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter-button:hover {
+    background-color: var(--brightBlue);
+    color: white;
+}

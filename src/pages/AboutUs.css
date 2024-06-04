@@ -1,0 +1,47 @@
+.colleague-members-layout h1 {
+    color: var(--white);
+    text-shadow: 2px 1px 1px var(--red); 
+  }
+  
+  .colleague-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 2%;
+    background-color: var(--white);
+    border: solid 2px var(--red); 
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .colleague-members-layout {
+    padding-top: 5%;
+    background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .row:first-child {
+    margin-bottom: 20px; 
+  }
+  
+  .colleague-card {
+    margin: 0 10px; 
+  }
+  
+  
+   
+
+
+
