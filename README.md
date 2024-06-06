@@ -4,6 +4,40 @@
 
 Welcome to Fur-ever Found, a web application dedicated to helping you advertise your lost pets and find missing pets in your area. Our platform is designed with user-friendly features to make your search as effective and seamless as possible. Join our community to ensure every lost pet finds its way back home.
 
+## Getting Started
+
+1. **Clone the Repository**
+   - Clone the repository to your local machine using HTTPS or SSH:
+     ```
+     git clone https://github.com/mariprato/full_stack_project.git
+     ```
+
+2. **Open in an IDE**
+   - Open the cloned repository in your preferred IDE.
+
+3. **Update the Google API Key**
+   - Update the Google API key in the config file as per the instructions below.
+
+4. **Install Dependencies**
+   - Run the following command to ensure all dependencies are installed:
+     ```
+     npm install
+     ```
+
+5. **Start the Application**
+   - Use the following command to start the application:
+     ```
+     npm start
+     ```
+   - This should open a browser with the application running at `http://localhost:3000`.
+
+6. **Stop the Application**
+   - To stop the application, go to the terminal where the application is running and press `Ctrl + C`.
+
+## Usage
+
+- You can now use the web app. Any information you provide on the website is stored locally and remains contained on your machine.
+
 ## Installation
 
 ### Tools
