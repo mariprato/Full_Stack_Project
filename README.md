@@ -57,6 +57,22 @@ Welcome to Fur-ever Found, a web application dedicated to helping you advertise 
    - Replace `'YOUR_API_KEY'` with your actual API key.
 
 ### Screenshots of Web Application
+Home Page
+![image](https://github.com/mariprato/full_stack_project/assets/133596277/d31410f9-b262-4bbc-93d0-a89a4f900f2b)
+How Fur-Ever Found Works
+![image](https://github.com/mariprato/full_stack_project/assets/133596277/b9b28189-77d2-4ce7-b610-39dbd4c0c4cb)
+Lost Pets
+![image](https://github.com/mariprato/full_stack_project/assets/133596277/dd136988-3b0d-4f43-bc19-53ee24f22961)
+Pet Details Page
+![image](https://github.com/mariprato/full_stack_project/assets/133596277/28794a2d-15ca-4b53-af41-6323259b7f4a)
+Post Submission Form
+![image](https://github.com/mariprato/full_stack_project/assets/133596277/3c47247a-e44f-4cb9-805f-9024d5df030e)
+Our Team
+![image](https://github.com/mariprato/full_stack_project/assets/133596277/1a85fc6e-1946-448a-8d9e-94e5228e8704)
+
+
+
+
 
 ## Future Development
 
